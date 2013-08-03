@@ -1,0 +1,26 @@
+[user]
+	name = Clement Farabet
+	email = clement.farabet@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	ci = commit
+	st = status
+	br = branch
+	co = checkout
+	bra = branch -a
+	cyp = cherry-pick -n
+	mg = merge --no-ff --no-commit
+	switch = !legit switch \"$@\"
+	branches = !legit branches
+	sprout = !legit sprout \"$@\"
+	unpublish = !legit unpublish \"$@\"
+	harvest = !legit harvest \"$@\"
+	sync = !legit sync \"$@\"
+	publish = !legit publish \"$@\"
+	graft = !legit graft \"$@\"
+[core]
+	excludesfile = /Users/clement/.gitignore_global
+	editor = vim
