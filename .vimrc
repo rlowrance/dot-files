@@ -44,3 +44,22 @@ map <C-l> <C-w>l
 " clear search buffer when you press ,/
 nmap <silent> ,/ :nohlsearch<CR>
 
+" alternative key mappings
+inoremap kj <Esc>
+
+" disable arrow keys
+inoremap <Left>  <NOP>
+inoremap <Right> <NOP>
+inoremap <Up>    <NOP>
+inoremap <Down>  <NOP>
+
+" auto-reload .vimrc
+augroup reload_vimrc " {
+    autocmd!
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }
+
+" set color scheme; ones I like are delek, khoeler, railcasts, slate
+colorscheme slate
+
+
