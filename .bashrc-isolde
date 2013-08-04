@@ -156,7 +156,8 @@ export LUA_PATH="${LUA_DEFAULT_PATH};${MY_LUA_PATHS}"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # editor
-EDITOR=emacs
+#EDITOR=emacs
+EDITOR=vim
 
 # TODO.txt
 PATH=$PATH:"/home/roy/Dropbox/todo"
