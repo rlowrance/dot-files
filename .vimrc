@@ -27,19 +27,23 @@ set noerrorbells " don't beep
 set nobackup
 set noswapfile
 
+set laststatus=2  " show status line even if just one window
+
 filetype plugin indent on " indent according to syntax rules for file type
 
-"set mouse=a " enable mouse
+set mouse=a " enable mouse for command line, input, navigation
 
 " use Q for formatting current paragraph or selection
 vmap Q gq
 vmap Q gqap
 
-" make navigating amount multiple windows easier
+" make navigating among multiple windows easier
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+map <C-w> <C-w>w  " move to next window below or to right; cycle
+map <C-W> <C-w>W  " move to next window above to to left; cycle
 
 " clear search buffer when you press ,/
 nmap <silent> ,/ :nohlsearch<CR>
@@ -47,11 +51,11 @@ nmap <silent> ,/ :nohlsearch<CR>
 " alternative key mappings
 inoremap kj <Esc>
 
-" disable arrow keys
-inoremap <Left>  <NOP>
-inoremap <Right> <NOP>
-inoremap <Up>    <NOP>
-inoremap <Down>  <NOP>
+" disable arrow keys when in insert mode
+"inoremap <Left>  <NOP>
+"inoremap <Right> <NOP>
+"inoremap <Up>    <NOP>
+"inoremap <Down>  <NOP>
 
 " auto-reload .vimrc
 augroup reload_vimrc " {
