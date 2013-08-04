@@ -1,0 +1,2 @@
+/home/roy/Dropbox/nyu-thesis-project/data/generated-v4/obs1A/analysis/complete-matrix-lua,algo=knn,col=month,learningRate=0.05,learningRateDecay=0.001,obs=1A,radius=76,rank=1,timeLbfgs=60,timeSgd=60,which=complete,yearFirst=1984/log.txt
+/home/roy/Dropbox/nyu-thesis-project/data/generated-v4/obs1A/analysis/complete-matrix-lua,algo=knn,col=month,learningRate=0.05,learningRateDecay=0.001,obs=1A,radius=76,rank=1,timeLbfgs=60,timeSgd=60,which=complete,yearFirst=1984/#log.txt#
