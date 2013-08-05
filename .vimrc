@@ -29,6 +29,8 @@ set noswapfile
 
 set laststatus=2  " show status line even if just one window
 
+set autoread   " reload a file if it changes
+
 filetype plugin indent on " indent according to syntax rules for file type
 
 set mouse=a " enable mouse for command line, input, navigation
