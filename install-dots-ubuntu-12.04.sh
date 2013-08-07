@@ -1,3 +1,3 @@
-./install-universal-dot-files.sh
-cp .bashrc-isolde ~/.bashrc
+./install-dots-universal.sh
+cp .bashrc-ubuntu-12.04 ~/.bashrc
 
