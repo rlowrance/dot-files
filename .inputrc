@@ -1,0 +1,12 @@
+# from jeetworks.org/grokking-tl
+
+# be 8-bit clean
+set meta-flag on
+set input-meta on
+set output-meta on
+set convert-meta off
+
+# use vi mode for readline
+set editing-mode vi
+set keymap vi
+
