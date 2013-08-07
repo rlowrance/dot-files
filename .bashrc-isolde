@@ -158,6 +158,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # editor
 #EDITOR=emacs
 EDITOR=vim
+VISUAL=vim
 
 # TODO.txt
 PATH=$PATH:"/home/roy/Dropbox/todo"
