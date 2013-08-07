@@ -68,4 +68,7 @@ augroup END " }
 " set color scheme; ones I like are delek, khoeler, railcasts, slate
 colorscheme slate
 
+" underline current line in insert mode
+autocmd InsertEnter * set cursorline
+autocmd InsertLeave * set nocursorline
 
