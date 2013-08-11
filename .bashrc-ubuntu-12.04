@@ -117,11 +117,11 @@ alias rm="rm -i"
 #alias emacs="emacs -nw"
 
 # frequently access documents
-alias maybe="emacs -nw ~/Dropbox/todo/maybe.org"
-alias projects="emacs -nw ~/Dropbox/todo/projects.org"
-alias timesheet="emacs -nw ~/Dropbox/todo/timesheet.org"
-alias todo="emacs -nw ~/Dropbox/todo/todo.txt"
-alias tracking="emacs -nw ~/Dropbox/todo/tracking.org"
+alias maybe="vim ~/Dropbox/todo/maybe.org"
+alias projects="vim ~/Dropbox/todo/projects.org"
+alias timesheet="vim ~/Dropbox/todo/timesheet.org"
+alias todo="vim ~/Dropbox/todo/todo.txt"
+alias tracking="vim ~/Dropbox/todo/tracking.org"
 
 # frequently used directories
 alias notes="cd ~/Dropbox/reference/my-notes"
