@@ -8,7 +8,7 @@ set convert-meta off
 
 # use vi mode for readline
 set editing-mode vi
-set keymap vi-command
+set keymap vi
 
 # keep some emacs keybindings
 ## C-a and HOME: insert at beginning of line
