@@ -137,6 +137,17 @@ export ACCESS="lowrance@access.cims.nyu.edu"
 export BANQUO="lowrance@banquo.cims.nyu.edu"
 export ISOLDE="roy@98.14.252.163"
 
+# shortcut for hadoop distributed file system
+alias hfs="hadoop fs"
+export HAS=/usr/lib/hadoop/contrib/streaming
+export HSJ=hadoop-streaming-1.0.3.16.jar
+alias hjs="hadoop jar $HAS/$HSF"
+# To run streaming job
+## hfs -input /user/NetID/data.txt -output
+## headresults -mapper header -reducer cat -file header
+## hfs -cat headresults/part-00000 | wc -l=<number of mappers>
+
+
 # Lua's path for require "filename"
 # ref: www.lua.org/pil/8.1.html
 THESIS=/home/roy/Dropbox/nyu-thesis-project
