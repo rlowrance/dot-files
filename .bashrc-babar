@@ -6,5 +6,10 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific aliases and functions
-PATH=$PATH:~/local/bin
+PATH=~/local/bin:$PATH
+
+# hadoop related
+alias hfs="hadoop fs"
+alias stream="hadoop jar /usr/lib/hadoop/contrib/streaming/hadoop-streaming-1.0.3.16.jar"
+
 
