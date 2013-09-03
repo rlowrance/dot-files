@@ -1,6 +1,10 @@
 # install dot files that don't depend on the system
-cp .inputrc ~/.inputrc
-cp .emacs ~/.emacs
-cp .gvimrc ~/.gvimrc
-cp .tmux.conf ~/.tmux.conf
-cp .vimrc ~/.vimrc
+# copy individual files
+/bin/cp -rf .inputrc ~/.inputrc
+/bin/cp -rf .emacs ~/.emacs
+/bin/cp -rf .gvimrc ~/.gvimrc
+/bin/cp -rf .tmux.conf ~/.tmux.conf
+/bin/cp -rf .vimrc ~/.vimrc
+# copy directories
+/bin/cp -rf .vim/* ~/.vim
+
