@@ -1,3 +1,3 @@
-./install-dots-universal.sh
-cp .bashrc-ubuntu-12.04 ~/.bashrc
+./install-dots-common.sh
+cp .bashrc-ubuntu ~/.bashrc
 

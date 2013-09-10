@@ -1,3 +1,3 @@
-./install-dots-universal.sh
+./install-dots-common.sh
 cp .bashrc-babar ~/.bashrc
 
