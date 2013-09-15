@@ -2,12 +2,12 @@ set nocompatible " this also changes the meaning of other options
 
 " vim latex stuff: see vim-latex.sourceforge.net
 set grepprg=grep\ -nH\ $* " have grep always generate a file name
-let g:tex_flavor='latex' " load vim-latex for empty .tex files
+let g:tex_flavor='latex'  " load vim-latex for empty .tex files
 
 set hidden " hide buffers instead of closing them
 set nowrap " don't wrap lines
 
-set tabstop=4 " tab is four spaces
+set tabstop=4  " tab is four spaces
 set expandtab " convert tabs to spaces
 
 set backspace=indent,eol,start " allow backspacing over everthing in insert mode
@@ -32,9 +32,9 @@ set noerrorbells " don't beep
 set nobackup
 set noswapfile
 
-set laststatus=2 " show status line even if just one window
+set laststatus=2  " show status line even if just one window
 
-set autoread " reload a file if it changes
+set autoread   " reload a file if it changes
 
 filetype plugin indent on " indent according to syntax rules for file type
 
@@ -49,8 +49,8 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-map <C-w> <C-w>w " move to next window below or to right; cycle
-map <C-W> <C-w>W " move to next window above to to left; cycle
+map <C-w> <C-w>w  " move to next window below or to right; cycle
+map <C-W> <C-w>W  " move to next window above to to left; cycle
 
 " clear search buffer when you press ,/
 nmap <silent> ,/ :nohlsearch<CR>
@@ -59,10 +59,10 @@ nmap <silent> ,/ :nohlsearch<CR>
 inoremap kj <Esc>
 
 " disable arrow keys when in insert mode
-"inoremap <Left> <NOP>
+"inoremap <Left>  <NOP>
 "inoremap <Right> <NOP>
-"inoremap <Up> <NOP>
-"inoremap <Down> <NOP>
+"inoremap <Up>    <NOP>
+"inoremap <Down>  <NOP>
 
 " auto-reload .vimrc
 augroup reload_vimrc " {
@@ -76,3 +76,4 @@ colorscheme slate
 " underline current line in insert mode
 autocmd InsertEnter * set cursorline
 autocmd InsertLeave * set nocursorline
+
