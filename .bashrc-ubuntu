@@ -147,7 +147,6 @@ alias hjs="hadoop jar $HAS/$HSF"
 ## headresults -mapper header -reducer cat -file header
 ## hfs -cat headresults/part-00000 | wc -l=<number of mappers>
 
-
 # Lua's path for require "filename"
 # ref: www.lua.org/pil/8.1.html
 THESIS=/home/roy/Dropbox/nyu-thesis-project
@@ -164,7 +163,7 @@ export LUA_PATH="${LUA_DEFAULT_PATH};${MY_LUA_PATHS}"
 
 
 # for ruby version manager
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # editor
 #EDITOR=emacs
@@ -184,5 +183,5 @@ alias t="todo.sh -d $HOME/Dropbox/todo/todo.cfg"
 # see book TMUX: Productive Mouse-free Development
 #[ -z $"TMUX$"] && export TERM=xterm-256color
 
+echo PATH=$PATH
 echo "Ran custom .bashrc file"
-
