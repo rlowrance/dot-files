@@ -1,0 +1,51 @@
+# .bashrc
+
+# prompt
+PS1="\W $"
+
+# protect against mistakes
+#alias cp="cp --interactive --verbose"
+#alias mv="mv --interactive --verbose"
+#alias rm="rm --interactive"
+
+# point to MacVim's executable when vim is entered
+# NOTE: requires that MacVim be installed
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+
+# shortcuts
+alias emacs-help="cat /Users/rel/Dropboox/tracking/emacs-help.txt"
+alias thesis="cd /Users/rel/Dropbox/nyu-thesis-project"
+alias lwr="cd /Users/rel/Dropbox/nyu-real-estate/repp-repo-svn/src/local-weighted-regression-2/src"
+alias todo="vim /Users/rel/Dropbox/todo/todo.txt"
+alias projects="vim /Users/rel/Dropbox/todo/projects.org"
+alias maybe="vim /Users/rel/Dropbox/todo/maybe.org"
+alias tracking="vim /Users/rel/Dropbox/todo/tracking.org"
+alias timesheet="vim /Users/rel/Dropbox/todo/timesheet.org"
+
+# start emacs in terminal
+alias emacs="emacs -nw"
+
+# Set Lua's path for require "filename"
+LUA_THESIS="/Users/rel/Dropbox/nyu-thesis-project/src.git/lua/"
+ROY1="${LUA_THESIS}?"
+ROY2="${LUA_THESIS}?.lua"
+
+LUA_KERNEL_SMOOTHERS="/Users/rel/Dropbox/kernel-smoothers/"
+ROY3="${LUA_KERNEL_SMOOTHERS}?"
+ROY4="${LUA_KERNEL_SMOOTHERS}?.lua"
+
+LUA_DEFAULT_PATH=";"
+export LUA_PATH="${LUA_DEFAULT_PATH};${ROY1};${ROY2};${ROY3};${ROY4}"
+
+# todo.txt
+PATH=$PATH:"/Users/rel/Dropbox/todo"
+alias t='todo.sh -d /Users/rel/Dropbox/todo/todo.cfg'
+
+# short cuts to servers
+export ACCESS="lowrance@access.cims.nyu.edu"
+
+* look for executable in ~/bin first, then Homebrew's executables
+EXPORT PATH="~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+
+# say ran these commands
+echo "Ran roy's .bashrc commands"
