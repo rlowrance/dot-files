@@ -161,6 +161,8 @@ LUA_DEFAULT_PATH=";"
 
 export LUA_PATH="${LUA_DEFAULT_PATH};${MY_LUA_PATHS}"
 
+# Torch's executables
+PATH=~/bin:$PATH
 
 # for ruby version manager
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
