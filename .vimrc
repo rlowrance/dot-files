@@ -44,6 +44,10 @@ set mouse=a " enable mouse for command line, input, navigation
 vmap Q gq
 vmap Q gqap
 
+" save buffer in two keystrokes when in normal mode
+" THIS DOES NOT WORK IN MY UBUNTU ON ISOLDE
+"nmap <Esc><Esc> :w<CR>
+
 " make navigating among multiple windows easier
 map <C-h> <C-w>h
 map <C-j> <C-w>j
