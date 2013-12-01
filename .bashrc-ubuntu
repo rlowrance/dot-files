@@ -173,7 +173,7 @@ EDITOR=vim
 VISUAL=vim
 
 # TODO.txt
-PATH=$PATH:"/home/roy/Dropbox/todo"
+PATH=$PATH:"$HOME/Dropbox/todo"
 #alias t='todo.sh -d /home/roy/Dropbox/todo/todo.cfg'
 alias t="todo.sh -d $HOME/Dropbox/todo/todo.cfg"
 #export TODOTXT_DEFAULT_ACTION=ls
