@@ -1,5 +1,8 @@
 set nocompatible " this also changes the meaning of other options
 
+"two Escapes save the buffer
+map <Esc><Esc> :w<CR>
+
 " vim latex stuff: see vim-latex.sourceforge.net
 set grepprg=grep\ -nH\ $* " have grep always generate a file name
 let g:tex_flavor='latex'  " load vim-latex for empty .tex files
