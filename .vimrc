@@ -78,6 +78,7 @@ augroup reload_vimrc " {
 augroup END " }
 
 " set color scheme; ones I like are delek, khoeler, railcasts, slate
+syntax enable
 colorscheme slate
 
 " underline current line in insert mode
