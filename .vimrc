@@ -16,15 +16,15 @@ set expandtab " convert tabs to spaces
 set backspace=indent,eol,start " allow backspacing over everthing in insert mode
 set autoindent
 set copyindent " copy previous indentation on autoindenting
-"set number " always show line numbers
+set number " always show line numbers
 set shiftwidth=4 " number of spaces to use for autoindenting
 set shiftround " use multiple shiftweidth when indenting with '<'
 set showmatch " show matching parenthesis
 set ignorecase " ignore case when searching
 set smartcase " search is case sensitive iff not all lower case
 set smarttab " insert tabs at start of line according to shiftwidth, not tabstop
-set hlsearch " highlight search terms
-set incsearch " show search matches as you type
+"set hlsearch " highlight search terms
+"set incsearch " show search matches as you type
 
 set history=1000 " remember many commands
 set undolevels=1000 " allow many undoes
@@ -38,6 +38,7 @@ set noswapfile
 set laststatus=2  " show status line even if just one window
 
 set autoread   " reload a file if it changes
+:au CursorHold * checktime  " run checktime automatically after 4 secs
 
 filetype plugin indent on " indent according to syntax rules for file type
 
@@ -84,4 +85,13 @@ colorscheme slate
 " underline current line in insert mode
 autocmd InsertEnter * set cursorline
 autocmd InsertLeave * set nocursorline
+
+" save and reload folds
+autocmd BufWinLeave * mkview
+autocmd BufWinEnter * silent loadview
+
+" create folds manually then mark them (select then zf)
+set foldmethod=marker
+
+
 

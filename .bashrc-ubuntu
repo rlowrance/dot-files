@@ -185,5 +185,8 @@ alias t="todo.sh -d $HOME/Dropbox/todo/todo.cfg"
 # see book TMUX: Productive Mouse-free Development
 #[ -z $"TMUX$"] && export TERM=xterm-256color
 
+# path to julia executable
+alias julia=~/Dropbox/julia/usr/bin/julia-readline
+
 echo PATH=$PATH
 echo "Ran custom .bashrc file"
