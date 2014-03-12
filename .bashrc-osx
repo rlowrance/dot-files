@@ -26,26 +26,26 @@ alias timesheet="vim /Users/$USER/Dropbox/todo/timesheet.org"
 alias emacs="emacs -nw"
 
 # Set Lua's path for require "filename"
-LUA_THESIS="/Users/$USER/Dropbox/nyu-thesis-project/src.git/lua/"
-ROY1="${LUA_THESIS}?"
-ROY2="${LUA_THESIS}?.lua"
+#LUA_THESIS="/Users/$USER/Dropbox/nyu-thesis-project/src.git/lua/"
+#ROY1="${LUA_THESIS}?"
+#ROY2="${LUA_THESIS}?.lua"
 
-LUA_KERNEL_SMOOTHERS="/Users/$USER/Dropbox/kernel-smoothers/"
-ROY3="${LUA_KERNEL_SMOOTHERS}?"
-ROY4="${LUA_KERNEL_SMOOTHERS}?.lua"
+#LUA_KERNEL_SMOOTHERS="/Users/$USER/Dropbox/kernel-smoothers/"
+#ROY3="${LUA_KERNEL_SMOOTHERS}?"
+#ROY4="${LUA_KERNEL_SMOOTHERS}?.lua"
 
-LUA_DEFAULT_PATH=";"
-export LUA_PATH="${LUA_DEFAULT_PATH};${ROY1};${ROY2};${ROY3};${ROY4}"
+#LUA_DEFAULT_PATH=";"
+#export LUA_PATH="${LUA_DEFAULT_PATH};${ROY1};${ROY2};${ROY3};${ROY4}"
 
 # todo.txt
 PATH=$PATH:"/Users/$USER/Dropbox/todo"
 alias t='/Users/$USER/Dropbox/todo/todo.sh -d /Users/$USER/Dropbox/todo/todo.cfg'
 
 # short cuts to servers
-export ACCESS="lowrance@access.cims.nyu.edu"
+#export ACCESS="lowrance@access.cims.nyu.edu"
 
-* look for executable in ~/bin first, then Homebrew's executables
-EXPORT PATH="~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+# look for executable in ~/bin first, then Homebrew's executables
+export PATH="~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 # say ran these commands
 echo "Ran roy's .bashrc commands"
