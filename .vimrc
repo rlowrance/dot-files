@@ -88,7 +88,7 @@ colorscheme slate
 
 " highlight cursorline and cursorcolumn
 :hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-":hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+:hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
 " \c will toggle highlighting on and off (to make it easy to locate the cursor
 " in a large file)
