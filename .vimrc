@@ -83,12 +83,22 @@ syntax enable
 colorscheme slate
 
 " underline current line in insert mode
-autocmd InsertEnter * set cursorline
-autocmd InsertLeave * set nocursorline
+"autocmd InsertEnter * set cursorline
+"autocmd InsertLeave * set nocursorline
+
+" highlight cursorline and cursorcolumn
+:hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+":hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+
+" \c will toggle highlighting on and off (to make it easy to locate the cursor
+" in a large file)
+:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 " save and reload folds
-autocmd BufWinLeave * mkview
-autocmd BufWinEnter * silent loadview
+"autocmd BufWinLeave * mkview
+"autocmd BufWinEnter * silent loadview
+autocmd BufWrite * mkview
+autocmd BufRead * silent loadview
 
 " create folds manually then mark them (select then zf)
 set foldmethod=marker
