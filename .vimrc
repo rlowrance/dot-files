@@ -35,10 +35,11 @@ set noerrorbells " don't beep
 set nobackup
 set noswapfile
 
+" status line
 set laststatus=2  " show status line even if just one window
 
 set autoread   " reload a file if it changes
-:au CursorHold * checktime  " run checktime automatically after 4 secs
+autocmd CursorHold * checktime  " run checktime automatically after 4 secs
 
 filetype plugin indent on " indent according to syntax rules for file type
 
@@ -65,7 +66,7 @@ nmap <silent> ,/ :nohlsearch<CR>
 
 " alternative key mappings
 inoremap kj <Esc>
-
+ 
 " disable arrow keys when in insert mode
 "inoremap <Left>  <NOP>
 "inoremap <Right> <NOP>
@@ -83,16 +84,16 @@ syntax enable
 colorscheme slate
 
 " underline current line in insert mode
-"autocmd InsertEnter * set cursorline
-"autocmd InsertLeave * set nocursorline
+autocmd InsertEnter * set cursorline
+autocmd InsertLeave * set nocursorline
 
 " highlight cursorline and cursorcolumn
-:hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-:hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+highlight CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+highlight CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
 " \c will toggle highlighting on and off (to make it easy to locate the cursor
 " in a large file)
-:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 
 " save and reload folds
 "autocmd BufWinLeave * mkview
@@ -102,6 +103,3 @@ autocmd BufRead * silent loadview
 
 " create folds manually then mark them (select then zf)
 set foldmethod=marker
-
-
-
