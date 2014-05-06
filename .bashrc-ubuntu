@@ -188,5 +188,8 @@ alias t="todo.sh -d $HOME/Dropbox/todo/todo.cfg"
 # path to julia executable
 alias julia=~/Dropbox/julia/usr/bin/julia-readline
 
+# path to Scala sbt binaries
+export PATH=$PATH:"$HOME/Dropbox/sbt/sbt/bin/"
+
 echo PATH=$PATH
 echo "Ran custom .bashrc file"
