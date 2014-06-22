@@ -3,14 +3,22 @@
 # prompt
 PS1="\W $"
 
+# ignore a command if the same command was just recorded
+export HISTCONTROL=ignoredups
+
 # protect against mistakes
 #alias cp="cp --interactive --verbose"
 #alias mv="mv --interactive --verbose"
 #alias rm="rm --interactive"
+# MacOS doesn't use long options
+alias cp="cp -i -v"
+alias mv="mv -i -v"
+alias rm="rm -i"
 
 # point to MacVim's executable when vim is entered
 # NOTE: requires that MacVim be installed
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+alias gvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 
 # shortcuts
 alias emacs-help="cat /Users/$USER/Dropboox/tracking/emacs-help.txt"
@@ -46,6 +54,10 @@ alias t='/Users/$USER/Dropbox/todo/todo.sh -d /Users/$USER/Dropbox/todo/todo.cfg
 
 # look for executable in ~/bin first, then Homebrew's executables
 export PATH="~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+
+# ssh to carmen
+alias sshcarmen="ssh rel@74.68.125.10"
+
 
 # say ran these commands
 echo "Ran roy's .bashrc commands"
