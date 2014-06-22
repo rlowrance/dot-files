@@ -1,195 +1,63 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+# .bashrc
 
-# If not running interactively, don't do anything
-[ -z "$PS1" ] && return
-
-# don't put duplicate lines in the history. See bash(1) for more options
-# ... or force ignoredups and ignorespace
-HISTCONTROL=ignoredups:ignorespace
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
-
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color) color_prompt=yes;;
-esac
-
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-#force_color_prompt=yes
-
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
-fi
-
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
-
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
-
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
-
-# Roy's stuff
-# change the prompt
+# prompt
 PS1="\W $"
 
-# try to protect against clobering files
-# -i interactive
-# -v verbose
+# ignore a command if the same command was just recorded
+export HISTCONTROL=ignoredups
+
+# protect against mistakes
+#alias cp="cp --interactive --verbose"
+#alias mv="mv --interactive --verbose"
+#alias rm="rm --interactive"
+# MacOS doesn't use long options
 alias cp="cp -i -v"
 alias mv="mv -i -v"
 alias rm="rm -i"
 
-# run emacs in a terminal
-#alias emacs="emacs -nw"
+# point to MacVim's executable when vim is entered
+# NOTE: requires that MacVim be installed
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+alias gvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 
-# frequently access documents
-alias maybe="vim ~/Dropbox/todo/maybe.org"
-alias projects="vim ~/Dropbox/todo/projects.org"
-alias timesheet="vim ~/Dropbox/todo/timesheet.org"
-alias todo="vim ~/Dropbox/todo/todo.txt"
-alias tracking="vim ~/Dropbox/todo/tracking.org"
+# shortcuts
+alias emacs-help="cat /Users/$USER/Dropboox/tracking/emacs-help.txt"
+alias thesis="cd /Users/$USER/Dropbox/nyu-thesis-project"
+alias lwr="cd /Users/$USER/Dropbox/nyu-real-estate/repp-repo-svn/src/local-weighted-regression-2/src"
+alias todo="vim /Users/$USER/Dropbox/todo/todo.txt"
+alias projects="vim /Users/$USER/Dropbox/todo/projects.org"
+alias maybe="vim /Users/$USER/Dropbox/todo/maybe.org"
+alias tracking="vim /Users/$USER/Dropbox/todo/tracking.org"
+alias timesheet="vim /Users/$USER/Dropbox/todo/timesheet.org"
 
-# frequently used directories
-alias notes="cd ~/Dropbox/reference/my-notes"
-alias reference="cd ~/Dropbox/reference"
-alias thesis="cd ~/Dropbox/nyu-thesis-project"
+# start emacs in terminal
+alias emacs="emacs -nw"
 
-# commands
-alias pylint="pylint --rcfile=/home/roy/.pylintrc"
+# Set Lua's path for require "filename"
+#LUA_THESIS="/Users/$USER/Dropbox/nyu-thesis-project/src.git/lua/"
+#ROY1="${LUA_THESIS}?"
+#ROY2="${LUA_THESIS}?.lua"
+
+#LUA_KERNEL_SMOOTHERS="/Users/$USER/Dropbox/kernel-smoothers/"
+#ROY3="${LUA_KERNEL_SMOOTHERS}?"
+#ROY4="${LUA_KERNEL_SMOOTHERS}?.lua"
+
+#LUA_DEFAULT_PATH=";"
+#export LUA_PATH="${LUA_DEFAULT_PATH};${ROY1};${ROY2};${ROY3};${ROY4}"
+
+# todo.txt
+PATH=$PATH:"/Users/$USER/Dropbox/todo"
+alias t='/Users/$USER/Dropbox/todo/todo.sh -d /Users/$USER/Dropbox/todo/todo.cfg'
 
 # short cuts to servers
-export NYU="lowrance@access.cims.nyu.edu"
-export ACCESS="lowrance@access.cims.nyu.edu"
-export BANQUO="lowrance@banquo.cims.nyu.edu"
-export ISOLDE="roy@98.14.252.163"
+#export ACCESS="lowrance@access.cims.nyu.edu"
 
-# shortcut for hadoop distributed file system
-alias hfs="hadoop fs"
-export HAS=/usr/lib/hadoop/contrib/streaming
-export HSJ=hadoop-streaming-1.0.3.16.jar
-alias hjs="hadoop jar $HAS/$HSF"
-# To run streaming job
-## hfs -input /user/NetID/data.txt -output
-## headresults -mapper header -reducer cat -file header
-## hfs -cat headresults/part-00000 | wc -l=<number of mappers>
+# look for executable in ~/bin first, then Homebrew's executables
+export PATH="~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
-# Lua's path for require "filename"
-# ref: www.lua.org/pil/8.1.html
-THESIS=/home/roy/Dropbox/nyu-thesis-project
-LP1=$THESIS/src.git/lua/?.lua
-LP2=$THESIS/lualibs/kernel-smoothers/?.lua
-LP3=$THESIS/lualibs/vsgs/?.lua
-LP4=$THESIS/lualibs/pgm/src/?.lua
+# ssh to carmen
+alias sshcarmen="ssh rel@74.68.125.10"
 
-MY_LUA_PATHS="${LP1};${LP2};${LP3};${LP4}"
 
-LUA_DEFAULT_PATH=";"
-
-export LUA_PATH="${LUA_DEFAULT_PATH};${MY_LUA_PATHS}"
-
-# Torch's executables
-PATH=~/bin:$PATH
-
-# for ruby version manager
-#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# editor
-#EDITOR=emacs
-EDITOR=vim
-VISUAL=vim
-
-# TODO.txt
-PATH=$PATH:"$HOME/Dropbox/todo"
-#alias t='todo.sh -d /home/roy/Dropbox/todo/todo.cfg'
-alias t="todo.sh -d $HOME/Dropbox/todo/todo.cfg"
-#export TODOTXT_DEFAULT_ACTION=ls
-
-# enable 256-colors unless running tmiux
-[ -z "$TMUX" ] && export TERM=xterm-256color
-
-# tell tmux to use 256 colors 
-# see book TMUX: Productive Mouse-free Development
-#[ -z $"TMUX$"] && export TERM=xterm-256color
-
-# path to julia executable
-alias julia=~/Dropbox/julia/usr/bin/julia-readline
-
-# path to Scala sbt binaries
-export PATH=$PATH:"$HOME/Dropbox/sbt/sbt/bin/"
-
-echo PATH=$PATH
-echo "Ran custom .bashrc file"
+# say ran these commands
+echo "Ran roy's .bashrc commands"

@@ -1,5 +1,16 @@
 set nocompatible " this also changes the meaning of other options
 
+" start pathogen
+execute pathogen#infect()
+syntax on
+filetype plugin indent on " indent according to syntax rules for file type
+" now any plugs can be extacted to a subdirectory under ~/.vim/bundle and they
+" will be added to the 'runtimepath'
+" ref: https://github.com/tpope/vim-pathogen
+
+" map jk to <ESC>
+inoremap jk <ESC>
+
 "two Escapes save the buffer
 map <Esc><Esc> :w<CR>
 
@@ -41,7 +52,6 @@ set laststatus=2  " show status line even if just one window
 set autoread   " reload a file if it changes
 autocmd CursorHold * checktime  " run checktime automatically after 4 secs
 
-filetype plugin indent on " indent according to syntax rules for file type
 
 set mouse=a " enable mouse for command line, input, navigation
 
