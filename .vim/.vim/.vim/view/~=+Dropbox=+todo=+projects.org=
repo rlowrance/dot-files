@@ -99,7 +99,10 @@ imap <buffer> <silent>  <Plug>OrgPromoteOnHeadingInsert
 imap <buffer> <silent>  <Plug>OrgDemoteOnHeadingInsert
 let &cpo=s:cpo_save
 unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
 setlocal autoindent
+setlocal balloonexpr=
 setlocal nobinary
 setlocal bufhidden=
 setlocal buflisted
@@ -112,6 +115,8 @@ setlocal colorcolumn=
 setlocal comments=://,b:#,:%,:XCOMM,n:>,fb:-
 setlocal commentstring=#\ %s
 setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=nc
+setlocal conceallevel=2
 setlocal completefunc=
 setlocal copyindent
 setlocal cryptmethod=
@@ -141,8 +146,8 @@ setlocal formatexpr=
 setlocal formatoptions=tcq
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=0
+setlocal iminsert=2
+setlocal imsearch=2
 setlocal include=
 setlocal includeexpr=
 setlocal indentexpr=GetOrgIndent()
@@ -158,7 +163,7 @@ setlocal matchpairs=(:),{:},[:]
 setlocal modeline
 setlocal modifiable
 setlocal nrformats=octal,hex
-setlocal number
+setlocal nonumber
 setlocal numberwidth=4
 setlocal omnifunc=
 setlocal path=
@@ -167,6 +172,8 @@ setlocal nopreviewwindow
 setlocal quoteescape=\\
 setlocal noreadonly
 setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
 setlocal noscrollbind
 setlocal shiftwidth=8
 setlocal noshortname
@@ -185,7 +192,7 @@ setlocal syntax=org
 endif
 setlocal tabstop=8
 setlocal tags=
-setlocal textwidth=0
+setlocal textwidth=72
 setlocal thesaurus=
 setlocal noundofile
 setlocal nowinfixheight
@@ -194,12 +201,48 @@ setlocal nowrap
 setlocal wrapmargin=0
 2
 normal zo
-let s:l = 4 - ((3 * winheight(0) + 11) / 22)
+13
+normal zc
+22
+normal zc
+25
+normal zc
+35
+normal zc
+45
+normal zc
+63
+normal zc
+70
+normal zc
+86
+normal zc
+108
+normal zc
+118
+normal zc
+126
+normal zc
+142
+normal zc
+245
+normal zo
+273
+normal zc
+540
+normal zc
+559
+normal zc
+898
+normal zo
+1038
+normal zc
+let s:l = 13 - ((12 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-4
-normal! 030l
+13
+normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

@@ -201,47 +201,35 @@ setlocal nowrap
 setlocal wrapmargin=0
 2
 normal zo
-13
-normal zc
-22
-normal zc
-25
-normal zc
-35
-normal zc
-45
-normal zc
-63
-normal zc
-70
-normal zc
-86
-normal zc
-108
-normal zc
-118
-normal zc
-126
-normal zc
-142
-normal zc
-245
+18
 normal zo
-273
+30
 normal zc
-540
+39
 normal zc
-559
+41
 normal zc
-898
-normal zo
-1038
+49
 normal zc
-let s:l = 13 - ((12 * winheight(0) + 21) / 43)
+65
+normal zc
+69
+normal zc
+78
+normal zc
+90
+normal zc
+201
+normal zc
+218
+normal zc
+499
+normal zc
+let s:l = 17 - ((16 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-13
+17
 normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

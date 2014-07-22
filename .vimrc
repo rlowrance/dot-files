@@ -8,8 +8,9 @@ filetype plugin indent on " indent according to syntax rules for file type
 " will be added to the 'runtimepath'
 " ref: https://github.com/tpope/vim-pathogen
 
-" map jk to <ESC>
-inoremap jk <ESC>
+" map jk and kj   to <ESC>
+"inoremap jk <ESC>
+"inoremap kj <Esc>
 
 "two Escapes save the buffer
 map <Esc><Esc> :w<CR>
@@ -74,8 +75,6 @@ map <C-W> <C-w>W  " move to next window above to to left; cycle
 " clear search buffer when you press ,/
 nmap <silent> ,/ :nohlsearch<CR>
 
-" alternative key mappings
-inoremap kj <Esc>
  
 " disable arrow keys when in insert mode
 "inoremap <Left>  <NOP>

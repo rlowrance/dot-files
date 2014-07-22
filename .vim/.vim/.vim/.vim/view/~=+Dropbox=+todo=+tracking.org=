@@ -203,27 +203,23 @@ setlocal wrapmargin=0
 normal zo
 3
 normal zo
-9
+6
 normal zc
-542
+539
 normal zo
-879
+876
 normal zo
-879
+876
 normal zo
-542
+539
 normal zc
 2
 normal zo
-1114
-normal zo
-1114
-normal zc
-let s:l = 8 - ((7 * winheight(0) + 21) / 43)
+let s:l = 5 - ((4 * winheight(0) + 21) / 43)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-8
+5
 normal! 010l
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

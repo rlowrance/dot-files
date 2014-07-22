@@ -1,6 +1,9 @@
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
+setlocal keymap=
+setlocal noarabic
 setlocal autoindent
+setlocal balloonexpr=
 setlocal nobinary
 setlocal bufhidden=
 setlocal buflisted
@@ -13,6 +16,8 @@ setlocal colorcolumn=
 setlocal comments=:--
 setlocal commentstring=--%s
 setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
 setlocal completefunc=
 setlocal copyindent
 setlocal cryptmethod=
@@ -42,8 +47,8 @@ setlocal formatexpr=
 setlocal formatoptions=croql
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=0
+setlocal iminsert=2
+setlocal imsearch=2
 setlocal include=
 setlocal includeexpr=
 setlocal indentexpr=GetLuaIndent()
@@ -68,6 +73,8 @@ setlocal nopreviewwindow
 setlocal quoteescape=\\
 setlocal noreadonly
 setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
 setlocal noscrollbind
 setlocal shiftwidth=3
 setlocal noshortname
@@ -93,12 +100,12 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
-let s:l = 12 - ((11 * winheight(0) + 24) / 49)
+let s:l = 1 - ((0 * winheight(0) + 42) / 84)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-12
-normal! 02l
+1
+normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

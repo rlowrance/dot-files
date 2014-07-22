@@ -71,7 +71,6 @@ setlocal keywordprg=
 setlocal nolinebreak
 setlocal nolisp
 setlocal nolist
-setlocal nomacmeta
 setlocal makeprg=
 setlocal matchpairs=(:),{:},[:]
 setlocal modeline
@@ -113,11 +112,11 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
-let s:l = 4 - ((3 * winheight(0) + 26) / 53)
+let s:l = 105 - ((86 * winheight(0) + 45) / 90)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-4
+105
 normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

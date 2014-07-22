@@ -99,10 +99,7 @@ imap <buffer> <silent>  <Plug>OrgPromoteOnHeadingInsert
 imap <buffer> <silent>  <Plug>OrgDemoteOnHeadingInsert
 let &cpo=s:cpo_save
 unlet s:cpo_save
-setlocal keymap=
-setlocal noarabic
 setlocal autoindent
-setlocal balloonexpr=
 setlocal nobinary
 setlocal bufhidden=
 setlocal buflisted
@@ -115,8 +112,6 @@ setlocal colorcolumn=
 setlocal comments=://,b:#,:%,:XCOMM,n:>,fb:-
 setlocal commentstring=#\ %s
 setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=nc
-setlocal conceallevel=2
 setlocal completefunc=
 setlocal copyindent
 setlocal cryptmethod=
@@ -146,8 +141,8 @@ setlocal formatexpr=
 setlocal formatoptions=tcq
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal grepprg=
-setlocal iminsert=2
-setlocal imsearch=2
+setlocal iminsert=0
+setlocal imsearch=0
 setlocal include=
 setlocal includeexpr=
 setlocal indentexpr=GetOrgIndent()
@@ -157,9 +152,7 @@ setlocal iskeyword=@,48-57,_,192-255
 setlocal keywordprg=
 setlocal nolinebreak
 setlocal nolisp
-setlocal lispwords=
 setlocal nolist
-setlocal nomacmeta
 setlocal makeprg=
 setlocal matchpairs=(:),{:},[:]
 setlocal modeline
@@ -174,8 +167,6 @@ setlocal nopreviewwindow
 setlocal quoteescape=\\
 setlocal noreadonly
 setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
 setlocal noscrollbind
 setlocal shiftwidth=8
 setlocal noshortname
@@ -185,7 +176,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!Pl#Statusline(0,1)
+setlocal statusline=
 setlocal suffixesadd=
 setlocal noswapfile
 setlocal synmaxcol=3000
@@ -194,22 +185,21 @@ setlocal syntax=org
 endif
 setlocal tabstop=8
 setlocal tags=
-setlocal textwidth=72
+setlocal textwidth=0
 setlocal thesaurus=
 setlocal noundofile
-setlocal undolevels=-123456
 setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
 2
-normal! zo
-let s:l = 5 - ((4 * winheight(0) + 47) / 95)
+normal zo
+let s:l = 4 - ((3 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-5
-normal! 042|
+4
+normal! 030l
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

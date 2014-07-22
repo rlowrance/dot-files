@@ -1,6 +1,9 @@
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
+setlocal keymap=
+setlocal noarabic
 setlocal autoindent
+setlocal balloonexpr=
 setlocal nobinary
 setlocal bufhidden=
 setlocal buflisted
@@ -13,6 +16,8 @@ setlocal colorcolumn=
 setlocal comments=:--
 setlocal commentstring=--%s
 setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
 setlocal completefunc=
 setlocal copyindent
 setlocal cryptmethod=
@@ -42,8 +47,8 @@ setlocal formatexpr=
 setlocal formatoptions=croql
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=0
+setlocal iminsert=2
+setlocal imsearch=2
 setlocal include=
 setlocal includeexpr=
 setlocal indentexpr=GetLuaIndent()
@@ -68,6 +73,8 @@ setlocal nopreviewwindow
 setlocal quoteescape=\\
 setlocal noreadonly
 setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
 setlocal noscrollbind
 setlocal shiftwidth=3
 setlocal noshortname
@@ -95,11 +102,19 @@ setlocal nowrap
 setlocal wrapmargin=0
 21
 normal zc
+34
+normal zc
+50
+normal zc
+69
+normal zc
 97
 normal zc
 124
 normal zc
 154
+normal zo
+181
 normal zo
 154
 normal zc
@@ -114,23 +129,31 @@ normal zc
 288
 normal zc
 332
-normal zo
-431
-normal zo
-431
+normal zc
+368
 normal zc
 431
 normal zo
-439
+440
 normal zc
-469
+457
 normal zc
-let s:l = 507 - ((52 * winheight(0) + 24) / 49)
+470
+normal zc
+431
+normal zc
+440
+normal zc
+458
+normal zc
+471
+normal zc
+let s:l = 549 - ((395 * winheight(0) + 43) / 86)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-507
-normal! 028l
+549
+normal! 022l
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :
