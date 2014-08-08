@@ -15,20 +15,21 @@ alias cp="cp -i -v"
 alias mv="mv -i -v"
 alias rm="rm -i"
 
+# OSX only
 # point to MacVim's executable when vim is entered
 # NOTE: requires that MacVim be installed
-alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
-alias gvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
+#alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+#alias gvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 
 # shortcuts
-alias emacs-help="cat /Users/$USER/Dropboox/tracking/emacs-help.txt"
-alias thesis="cd /Users/$USER/Dropbox/nyu-thesis-project"
-alias lwr="cd /Users/$USER/Dropbox/nyu-real-estate/repp-repo-svn/src/local-weighted-regression-2/src"
-alias todo="vim /Users/$USER/Dropbox/todo/todo.txt"
-alias projects="vim /Users/$USER/Dropbox/todo/projects.org"
-alias maybe="vim /Users/$USER/Dropbox/todo/maybe.org"
-alias tracking="vim /Users/$USER/Dropbox/todo/tracking.org"
-alias timesheet="vim /Users/$USER/Dropbox/todo/timesheet.org"
+alias emacs-help="cat $HOME/Dropboox/tracking/emacs-help.txt"
+alias thesis="cd $HOME/Dropbox/nyu-thesis-project"
+alias lwr="cd $HOME/Dropbox/nyu-real-estate/repp-repo-svn/src/local-weighted-regression-2/src"
+alias todo="vim $HOME/Dropbox/todo/todo.txt"
+alias projects="vim $HOME/Dropbox/todo/projects.org"
+alias maybe="vim $HOME/Dropbox/todo/maybe.org"
+alias tracking="vim $HOME/Dropbox/todo/tracking.org"
+alias timesheet="vim $HOME/Dropbox/todo/timesheet.org"
 
 # start emacs in terminal
 alias emacs="emacs -nw"
@@ -46,8 +47,8 @@ alias emacs="emacs -nw"
 #export LUA_PATH="${LUA_DEFAULT_PATH};${ROY1};${ROY2};${ROY3};${ROY4}"
 
 # todo.txt
-PATH=$PATH:"/Users/$USER/Dropbox/todo"
-alias t='/Users/$USER/Dropbox/todo/todo.sh -d /Users/$USER/Dropbox/todo/todo.cfg'
+PATH=$PATH:"$HOME/Dropbox/todo"
+alias t='$HOME/Dropbox/todo/todo.sh -d $HOME/Dropbox/todo/todo.cfg'
 
 # short cuts to servers
 #export ACCESS="lowrance@access.cims.nyu.edu"
