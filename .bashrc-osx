@@ -53,7 +53,7 @@ alias t='/Users/$USER/Dropbox/todo/todo.sh -d /Users/$USER/Dropbox/todo/todo.cfg
 #export ACCESS="lowrance@access.cims.nyu.edu"
 
 # look for executable in ~/bin first, then Homebrew's executables
-export PATH="~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="~/anaconda/bin:~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 # ssh to carmen
 alias sshcarmen="ssh rel@74.68.125.10"

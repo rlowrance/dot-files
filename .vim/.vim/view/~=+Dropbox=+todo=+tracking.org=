@@ -157,7 +157,6 @@ setlocal iskeyword=@,48-57,_,192-255
 setlocal keywordprg=
 setlocal nolinebreak
 setlocal nolisp
-setlocal lispwords=
 setlocal nolist
 setlocal nomacmeta
 setlocal makeprg=
@@ -197,29 +196,24 @@ setlocal tags=
 setlocal textwidth=0
 setlocal thesaurus=
 setlocal noundofile
-setlocal undolevels=-123456
 setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
-2
+18
 normal! zo
-3
+31
 normal! zo
-1189
+33
 normal! zo
-1189
-normal! zc
-1403
+35
 normal! zo
-1410
-normal! zo
-let s:l = 4 - ((3 * winheight(0) + 47) / 95)
+let s:l = 34 - ((33 * winheight(0) + 26) / 53)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-4
-normal! 011|
+34
+normal! 061|
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

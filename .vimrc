@@ -90,7 +90,10 @@ augroup END " }
 
 " set color scheme; ones I like are delek, khoeler, railcasts, slate
 syntax enable
-colorscheme slate
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
+" colorscheme slate
 
 " underline current line in insert mode
 autocmd InsertEnter * set cursorline

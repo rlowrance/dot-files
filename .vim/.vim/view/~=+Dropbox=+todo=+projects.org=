@@ -99,7 +99,10 @@ imap <buffer> <silent>  <Plug>OrgPromoteOnHeadingInsert
 imap <buffer> <silent>  <Plug>OrgDemoteOnHeadingInsert
 let &cpo=s:cpo_save
 unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
 setlocal autoindent
+setlocal balloonexpr=
 setlocal nobinary
 setlocal bufhidden=
 setlocal buflisted
@@ -112,6 +115,8 @@ setlocal colorcolumn=
 setlocal comments=://,b:#,:%,:XCOMM,n:>,fb:-
 setlocal commentstring=#\ %s
 setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=nc
+setlocal conceallevel=2
 setlocal completefunc=
 setlocal copyindent
 setlocal cryptmethod=
@@ -153,6 +158,7 @@ setlocal keywordprg=
 setlocal nolinebreak
 setlocal nolisp
 setlocal nolist
+setlocal nomacmeta
 setlocal makeprg=
 setlocal matchpairs=(:),{:},[:]
 setlocal modeline
@@ -167,6 +173,8 @@ setlocal nopreviewwindow
 setlocal quoteescape=\\
 setlocal noreadonly
 setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
 setlocal noscrollbind
 setlocal shiftwidth=8
 setlocal noshortname
@@ -176,7 +184,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=
+setlocal statusline=%!Pl#Statusline(0,1)
 setlocal suffixesadd=
 setlocal noswapfile
 setlocal synmaxcol=3000
@@ -185,7 +193,7 @@ setlocal syntax=org
 endif
 setlocal tabstop=8
 setlocal tags=
-setlocal textwidth=0
+setlocal textwidth=72
 setlocal thesaurus=
 setlocal noundofile
 setlocal nowinfixheight
@@ -193,13 +201,17 @@ setlocal nowinfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
 2
-normal zo
-let s:l = 4 - ((3 * winheight(0) + 11) / 22)
+normal! zo
+10
+normal! zo
+17
+normal! zo
+let s:l = 9 - ((8 * winheight(0) + 26) / 53)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-4
-normal! 030l
+9
+normal! 058|
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

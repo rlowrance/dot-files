@@ -24,3 +24,6 @@ export PATH
 
 source ~/.bashrc
 
+
+# added by Anaconda 2.1.0 installer
+export PATH="/Users/rp/anaconda/bin:$PATH"
