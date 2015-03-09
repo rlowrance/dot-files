@@ -1,0 +1,71 @@
+# .bashrc
+
+# prompt
+PS1="\W $"
+
+# ignore a command if the same command was just recorded
+export HISTCONTROL=ignoredups
+
+# protect against mistakes
+#alias cp="cp --interactive --verbose"
+#alias mv="mv --interactive --verbose"
+#alias rm="rm --interactive"
+# MacOS doesn't use long options
+alias cp="cp -i -v"
+alias mv="mv -i -v"
+alias rm="rm -i"
+
+# OSX only
+# point to MacVim's executable when vim is entered
+# NOTE: requires that MacVim be installed
+#alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+#alias gvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
+
+# shortcuts
+alias emacs-help="cat $HOME/Dropboox/tracking/emacs-help.txt"
+alias thesis="cd $HOME/Dropbox/nyu-thesis-project"
+alias lwr="cd $HOME/Dropbox/nyu-real-estate/repp-repo-svn/src/local-weighted-regression-2/src"
+alias todo="vim $HOME/Dropbox/todo/todo.txt"
+alias projects="vim $HOME/Dropbox/todo/projects.org"
+alias maybe="vim $HOME/Dropbox/todo/maybe.org"
+alias tracking="vim $HOME/Dropbox/todo/tracking.org"
+alias timesheet="vim $HOME/Dropbox/todo/timesheet.org"
+
+# start emacs in terminal
+alias emacs="emacs -nw"
+
+# Set Lua's path for require "filename"
+#LUA_THESIS="/Users/$USER/Dropbox/nyu-thesis-project/src.git/lua/"
+#ROY1="${LUA_THESIS}?"
+#ROY2="${LUA_THESIS}?.lua"
+
+#LUA_KERNEL_SMOOTHERS="/Users/$USER/Dropbox/kernel-smoothers/"
+#ROY3="${LUA_KERNEL_SMOOTHERS}?"
+#ROY4="${LUA_KERNEL_SMOOTHERS}?.lua"
+
+#LUA_DEFAULT_PATH=";"
+#export LUA_PATH="${LUA_DEFAULT_PATH};${ROY1};${ROY2};${ROY3};${ROY4}"
+
+# todo.txt
+PATH=$PATH:"$HOME/Dropbox/todo"
+alias t='$HOME/Dropbox/todo/todo.sh -d $HOME/Dropbox/todo/todo.cfg'
+
+# short cuts to servers
+#export ACCESS="lowrance@access.cims.nyu.edu"
+
+# ssh to carmen
+alias sshcarmen="ssh rel@74.68.125.10"
+
+
+# specific to NYU RedHat
+## NYU RedHat specific shortcuts
+alias vim=/usr/local/bin/vim-7.4
+
+# anaconda holds python and python-based code
+export PATH="~/anaconda/bin:$PATH"
+
+## turn off PYTHONPATH
+PYTHONPATH=
+
+# say ran these commands
+echo "Ran roy's .bashrc commands"
