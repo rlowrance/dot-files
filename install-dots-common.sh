@@ -3,9 +3,6 @@
 /bin/cp -r .bash_profile ~
 /bin/cp -r .inputrc ~
 /bin/cp -r .emacs ~
-/bin/cp -r .gvimrc ~
 /bin/cp -r .tmux.conf ~
-/bin/cp -r .vimrc ~
 # copy directories
-/bin/cp -r .vim ~
 
