@@ -1,0 +1,6 @@
+# point to MacVim's executable when vim is entered
+# NOTE: requires that MacVim be installed
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+alias gvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
+
+alias q="~q/m32/q"
