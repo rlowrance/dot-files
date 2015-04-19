@@ -16,9 +16,8 @@ filetype plugin indent on " indent according to syntax rules for file type
 " don't run the mccabe complexity checker
 let g:pymode_lint_checkers = ['pyflakes', 'pep8']
 
-" map jk and kj   to <ESC>
-"inoremap jk <ESC>
-"inoremap kj <Esc>
+" map jk to <ESC>
+inoremap jk <ESC>
 
 "two Escapes save the buffer
 map <Esc><Esc> :w<CR>
@@ -28,9 +27,9 @@ set grepprg=grep\ -nH\ $* " have grep always generate a file name
 let g:tex_flavor='latex'  " load vim-latex for empty .tex files
 
 set hidden " hide buffers instead of closing them
-set nowrap " don't wrap lines
+set nowrap " don't wrap lines; scroll horizontally to see long lines
 
-set tabstop=4  " tab is four spaces
+set tabstop=4
 set expandtab " convert tabs to spaces
 
 set backspace=indent,eol,start " allow backspacing over everthing in insert mode
@@ -67,10 +66,6 @@ set mouse=a " enable mouse for command line, input, navigation
 " use Q for formatting current paragraph or selection
 vmap Q gq
 vmap Q gqap
-
-" save buffer in two keystrokes when in normal mode
-" THIS DOES NOT WORK IN MY UBUNTU ON ISOLDE
-"nmap <Esc><Esc> :w<CR>
 
 " make navigating among multiple windows easier
 map <C-h> <C-w>h
@@ -121,5 +116,21 @@ nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 autocmd BufWrite * mkview
 autocmd BufRead * silent loadview
 
-" create folds manually then mark them (select then zf)
-set foldmethod=marker
+setlocal foldmethod=indent
+
+" detect *.md as markdown files (not Modula-2)
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+" python file type
+autocmd FileType python setlocal shiftwidth=4
+autocmd FileType python setlocal tabstop=4
+
+" txt file type
+autocmd BufNewFile,BufRead *.txt setlocal textwidth=80
+"autocmd BufNewFile,BufRead *.txt setlocal formatoptions+=t
+
+" .vimrc stuff: note my .vimrc sources a file in dropbox
+" <leader>ev --> (e)dit my (v)imrc file
+" <leader>sv --> (s)ouce my (v)imrc file
+nnoremap <leader>ev :split ~/Dropbox/dot-files/vimrc<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
