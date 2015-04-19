@@ -3,4 +3,4 @@
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 alias gvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"
 
-alias q="~q/m32/q"
+alias q="/Users/$USER/q/m32/q"
