@@ -15,16 +15,14 @@ alias rm="rm -i"
 
 # shortcuts
 alias emacs-help="cat ~/Dropboox/tracking/emacs-help.txt"
-alias thesis="cd ~/Dropbox/nyu-thesis-project"
-alias lwr="cd ~/Dropbox/nyu-real-estate/repp-repo-svn/src/local-weighted-regression-2/src"
 alias todo="vim ~/Dropbox/todo/todo.txt"
 alias projects="vim ~/Dropbox/todo/projects.org"
 alias maybe="vim ~/Dropbox/todo/maybe.org"
 alias tracking="vim ~/Dropbox/todo/tracking.org"
-alias timesheet="vim ~/Dropbox/todo/timesheet.org"
-alias migraines="vim ~/Dropbox/todo/migraines.org"
+alias timesheet="vim ~/Dropbox/todo/timesheet.txt"
+alias migraines="vim ~/Dropbox/todo/migraines.txt"
 
-alias timereport="cd ~/Dropbox/timesheet/src;Rscript timesheet.R"
+alias timereport="python ~/Dropbox/timesheet/timereport.py"
 
 # start emacs in terminal
 alias emacs="emacs -nw"
@@ -52,8 +50,9 @@ alias t='/Users/$USER/Dropbox/todo/todo.sh -d /Users/$USER/Dropbox/todo/todo.cfg
 export PATH="~/anaconda/bin:~/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 # ssh
-alias sshcarmen="ssh rel@74.68.125.10"
 alias sshelektra="ssh roy@24.193.90.232"
 
 # enable tab completion in conda
 eval "$(register-python-argcomplete conda)"
+
+alias startdropbox="~/.dropbox-dist/dropboxd"
