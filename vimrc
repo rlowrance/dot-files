@@ -29,16 +29,6 @@ filetype plugin indent on " indent according to syntax rules for file type
 " set g:vim_asciidoc_initial_foldlevel=1
 
 
-" Syntastic options
-"set statusline+=%#warningmsg#
-"set statusline+=#{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_eq = 0
-
 " pymode options
 " documentation is available in vim :help pymode
 " don't run the mccabe complexity checker
@@ -84,7 +74,7 @@ set visualbell " don't beep
 set noerrorbells " don't beep
 
 set nobackup
-set noswapfile
+"set noswapfile
 
 " status line
 set laststatus=2  " show status line even if just one window
@@ -152,6 +142,8 @@ setlocal foldmethod=indent
 
 " detect *.md as markdown files (not Modula-2)
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufNewFile,BufReadPost *.md set textwidth=80
+autocmd BufNewFile,BufReadPost *.md set formatoptions+=t
 
 " asciidoc file type
 autocmd BufNewFile,BufReadPost *.asciidoc set filetype=asciidoc
@@ -163,10 +155,18 @@ autocmd FileType python setlocal tabstop=4
 
 " tex file type
 autocmd BufNewFile,BufRead *.tex setlocal textwidth=80
+autocmd BufNewFile,BufRead *.tex setlocal formatoptions+=t
 
-" txt file type
+" the timesheet.txt file
+autocmd BufNewFile,BufRead timesheet.txt setlocal textwidth=80
+autocmd BufNewFile,BufRead timesheet.txt setlocal formatoptions+=t
+autocmd BufNewFile,BufRead timesheet.txt setlocal filetype=text
+
+" txt file type interpretted as markdown file
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=80
-"autocmd BufNewFile,BufRead *.txt setlocal formatoptions+=t
+autocmd BufNewFile,BufRead *.txt setlocal formatoptions+=t
+autocmd BufNewFile,BufRead *.txt setlocal filetype=markdown
+
 
 " .vimrc stuff: note my .vimrc sovrces a file in dropbox
 " <leader>ev --> (e)dit my (v)imrc file
