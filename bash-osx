@@ -1,0 +1,3 @@
+# rlwrap allows line recall and editing in the terminal
+# install it with "brew install rlwrap"
+alias q='rlwrap -i -pGREEN -q \" ~/q/m32/q'
