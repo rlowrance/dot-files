@@ -17,28 +17,40 @@ alias rm="rm -i"
 
 # shortcuts
 alias emacs-help="cat ~/Dropboox/tracking/emacs-help.txt"
+
+# todo.txt
+alias thome="t ls @home; t lsp; t ls judith"
+alias tnyu="t ls @nyu; t lsp; t ls david; t ls loraine; t ls foster"
+
+# edit specific todo-related files
 alias todo="vim ~/Dropbox/todo/todo.txt"
 alias projects="vim ~/Dropbox/todo/projects.org"
 alias maybe="vim ~/Dropbox/todo/maybe.org"
-alias tracking="vim ~/Dropbox/todo/tracking.org"
-alias timesheet="vim ~/Dropbox/todo/timesheet.txt"
-alias migraines="vim ~/Dropbox/todo/migraines.txt"
 alias next="vim ~/Dropbox/next/plan.asciidoc"
-alias thome="t ls @home; t lsp"
-alias tnyu="t ls @nyu; t lsp; t ls @david; t ls @loraine"
+alias tracking="vim ~/Dropbox/todo/tracking.org"
+alias migraines="vim ~/Dropbox/todo/migraines.txt"
 
+# tmux commands with hard-to-remember invocation options
 alias tmuxnew="tmux new -s $1"
 alias tmuxa="tmux a -t $1"
+alias tmuxkill="tmux kill-session -t $1"
 
+# switch to a directory
 alias gdots="cd ~/Dropbox/dot-files"
 alias gnotes="cd ~/Dropbox/Notes"
 alias gre="cd ~/Dropbox/shasha/re-avm/src"
 alias gpaper1="cd ~/Dropbox/shasha/re-avm/docs/paper1"
+alias gtimesheet="cd ~/Dropbox/timesheet"
+alias gtodo="cd ~/Dropbox/todo"
 
+# find notes with specified tag
 alias notesls="ls -c ~/Dropbox/Notes/ | grep $*"
+
 alias startdropbox="~/.dropbox-dist/dropboxd"
 alias fixcapslock="xmodmap ~/Dropbox/dot-files/make-capslock-another-escape.xmodmap"
 
+# time sheet
+alias timesheet="vim ~/Dropbox/timesheet/timesheet.txt"
 alias timereport="python ~/Dropbox/timesheet/timereport.py"
 
 # start emacs in terminal
