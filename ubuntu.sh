@@ -20,7 +20,7 @@ echo "source ~/Dropbox/dot-files/bashrc" > ~/.bashrc
 echo "source ~/Dropbox/dot-files/bashrc-nyu" >> ~/.bashrc
 echo "source ~/Dropbox/dot-files/gvimrc" > ~/.gvimrc
 ln -s ~/Dropbox/dot-files/gitconf ~/.gitconfig
-#echo "source ~/Dropbox/dot-files/inputrc" > ~/.inputrc  # use VI keys for readlines
+ln -s ~/Dropbox/dot-files/inputrc ~/.inputrc  
 echo "source ~/Dropbox/dot-files/tmux.conf" > ~/.tmux.conf
 cp -a ~/Dropbox/dot-files/dot-vim/. ~/.vim/
 echo "source ~/Dropbox/dot-files/vimrc" > ~/.vimrc
