@@ -12,6 +12,7 @@ rm ~/.bashrc
 rm ~/.gitconfig
 rm ~/.inputrc
 rm ~/.tmux.conf
+rm -r -f ~/.vim
 rm ~/.vimrc
 rm ~/.xinitrc
 rm ~/.xsession
