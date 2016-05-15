@@ -1,48 +1,35 @@
 set nocompatible " this also changes the meaning of other options
 
-" configure Vundle
-" first setup Vundle: git clone https://github.com/VundleVim/Vundle.vim.git 
-" ~/.vim/bundle/Vundle.vim
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim  " run time path
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'  " let Vundle manage Vundle
-" add other plug-ins here
-Plugin 'mjakl/vim-asciidoc'
-
-" all plugin must be added before the following line
-call vundle#end()
-filetype plugin indent on  " required for Vundle
-
 " start pathogen
-filetype off
-call pathogen#infect()
-call pathogen#helptags()
+execute pathogen#infect()
+"call pathogen#helptags()
 
 syntax on
 filetype plugin indent on " indent according to syntax rules for file type
-" now any plugs can be extacted to a subdirectory under ~/.vim/bundle and they
+" now any plugins can be extacted to a subdirectory under ~/.vim/bundle and they
 " will be added to the 'runtimepath'
 " ref: https://github.com/tpope/vim-pathogen
 
-" configure Plugin vim-asciidoc
-" set g:vim_asciidoc_initial_foldlevel=1
+" recommended syntastic settings for new users
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
-" pymode options
-" documentation is available in vim :help pymode
-" don't run the mccabe complexity checker
-let g:pymode_lint_checkers = ['pyflakes', 'pep8']
-let g:pymode_options_max_line_length = 120
-let g:pymode_folding = 1
-let g:pymode_rope = 0
-"let g:pymode_lint_options_pep8 = {'max_line_length': 120}
+" additional syntastic settings, for which, ref:
+" https://github.com/scrooloose/syntastic/blob/master/doc/syntastic.txt
+let g:syntastic_aggregate_errors = 1  " run all checkers and aggregate results
+let g:syntastic_python_checkers = ['pep8', 'python', 'pyflakes']
 
 " map jk to <ESC>
 inoremap jk <ESC>
 
 "two Escapes save the buffer
-map <Esc><Esc> :w<CR>
+"map <Esc><Esc> :w<CR>
 
 " vim latex stuff: see vim-latex.sourceforge.net
 set grepprg=grep\ -nH\ $* " have grep always generate a file name
