@@ -1,6 +1,10 @@
 set nocompatible " this also changes the meaning of other options
 
-" start pathogen
+" start pathogen, which manages these plugins
+"  syntastic
+"  vim-airline
+"  vim-markdown-folding
+
 execute pathogen#infect()
 "call pathogen#helptags()
 
@@ -10,10 +14,12 @@ filetype plugin indent on " indent according to syntax rules for file type
 " will be added to the 'runtimepath'
 " ref: https://github.com/tpope/vim-pathogen
 
+" status line is set by vim-airline
+
 " recommended syntastic settings for new users
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
