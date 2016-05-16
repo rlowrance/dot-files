@@ -38,6 +38,7 @@ alias tmuxkill="tmux kill-session -t $1"
 # switch to a directory
 alias gdots="cd ~/Dropbox/dot-files"
 alias gnotes="cd ~/Dropbox/Notes"
+alias gnotesa="cd ~/Dropbox/admin/NotesAdmin"
 alias gre="cd ~/Dropbox/shasha/re-avm/src"
 alias gpaper1="cd ~/Dropbox/shasha/re-avm/docs/paper1"
 alias gtimesheet="cd ~/Dropbox/timesheet"
