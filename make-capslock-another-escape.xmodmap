@@ -1,0 +1,4 @@
+! make caps lock an extra escape key
+! USAGE: xmodmap <this file>
+remove Lock = Caps_Lock
+keysym Caps_Lock = Escape
