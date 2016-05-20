@@ -27,8 +27,10 @@ alias todo="vim ~/Dropbox/todo/todo.txt"
 alias projects="vim ~/Dropbox/todo/projects.org"
 alias maybe="vim ~/Dropbox/todo/maybe.org"
 alias next="vim ~/Dropbox/next/plan.asciidoc"
-alias tracking="vim ~/Dropbox/todo/tracking.org"
+alias tracking="vim ~/Dropbox/todo/tracking.md"
 alias migraines="vim ~/Dropbox/todo/migraines.txt"
+alias game="vim ~/Dropbox/admin/NotesAdmin/game-1605NN-proposed.md"
+
 
 # tmux commands with hard-to-remember invocation options
 alias tmuxnew="tmux new -s $1"
@@ -89,6 +91,7 @@ alias t="$HOME/Dropbox/todo/todo.sh -d /Users/$USER/Dropbox/todo/todo.cfg"
 [[ :$PATH: == $HOME/anaconda/bin:* ]] || PATH=$HOME/anaconda/bin:$PATH
 # export PATH=~/anaconda2/bin::~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
+PATH=~/Dropbox/dot-files/scripts/:$PATH
 
 # enable tab completion in conda
 eval "$(register-python-argcomplete conda)"
