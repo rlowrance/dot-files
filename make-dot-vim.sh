@@ -12,8 +12,8 @@ cd ~/Dropbox/dot-files/dot-vim/bundle
 git clone https://github.com/scrooloose/syntastic.git
 
 # install vim-airline (status line)
-cd ~/Dropbox/dot-files/dot-vin/bundle
-git clone https://github.com/vim-airline/vim-airline.git
+#cd ~/Dropbox/dot-files/dot-vinm/bundle
+#git clone https://github.com/vim-airline/vim-airline.git
 
 # install vim-markdown-folding
 cd ~/Dropbox/dot-files/dot-vim/bundle
