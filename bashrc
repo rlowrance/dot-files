@@ -6,6 +6,9 @@ PS1="\h \W $"
 # ignore a command if the same command was just recorded
 export HISTCONTROL=ignoredups
 
+PYTHONPATH=~/Dropbox/pythonlib/sparsevector
+export PYTHONPATH
+
 # protect against mistakes
 #alias cp="cp --interactive --verbose"
 #alias mv="mv --interactive --verbose"
@@ -18,9 +21,14 @@ alias rm="rm -i"
 # shortcuts
 alias emacs-help="cat ~/Dropboox/tracking/emacs-help.txt"
 
+# os x only
+alias showhidden='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hidehidden='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
 # todo.txt
 alias thome="t ls @home; t lsp; t ls judith"
 alias tnyu="t ls @nyu; t lsp; t ls remi; t ls david; t ls loraine; t ls foster"
+alias tvim="vim ~/Dropbox/todo/todo.txt"
 
 # edit specific todo-related files
 alias todo="vim ~/Dropbox/todo/todo.txt"
@@ -30,7 +38,6 @@ alias next="vim ~/Dropbox/next/plan.asciidoc"
 alias tracking="vim ~/Dropbox/todo/tracking.md"
 alias migraines="vim ~/Dropbox/todo/migraines.txt"
 alias game="vim ~/Dropbox/admin/NotesAdmin/game-1605NN-proposed.md"
-
 
 # tmux commands with hard-to-remember invocation options
 alias tmuxnew="tmux new -s $1"
@@ -92,6 +99,7 @@ alias t="$HOME/Dropbox/todo/todo.sh -d /Users/$USER/Dropbox/todo/todo.cfg"
 # export PATH=~/anaconda2/bin::~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 PATH=~/Dropbox/dot-files/scripts/:$PATH
+PATH=~/java8/jdk1.8.0_92/bin/:$PATH
 
 # enable tab completion in conda
 eval "$(register-python-argcomplete conda)"
