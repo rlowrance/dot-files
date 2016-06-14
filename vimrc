@@ -14,12 +14,25 @@ filetype plugin indent on " indent according to syntax rules for file type
 " will be added to the 'runtimepath'
 " ref: https://github.com/tpope/vim-pathogen
 
-" status line is set by vim-airline
+" status line was set by vim-airline, but that seems broken
+" see file make-dot-vim.sh in the dot-files directory
 
 " recommended syntastic settings for new users
+"set statusline=
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
+
+" set status line
+set statusline=%f     " file name
+set statusline+=%y    " file type
+set statusline+=%=    " switch to right side
+set statusline+=%03l  " current line number
+set statusline+=/     " separator
+set statusline+=%L    " total lines
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
