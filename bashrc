@@ -71,7 +71,8 @@ alias emacs="emacs -nw"
 # ssh
 alias sshhome="ssh roy@66.65.168.212"
 alias sshcarmen="ssh rel@10.0.1.22"
-alias sshelektra="ssh rel@10.0.1.28"
+alias sshdell="ssh roy@10.0.1.36"
+alias sshelektra="ssh roy@10.0.1.28"
 
 # vnc
 alias vnccarmen="vnc://10.0.1.22"
