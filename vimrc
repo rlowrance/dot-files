@@ -47,6 +47,10 @@ let g:syntastic_python_checkers = ['pep8', 'python', 'pyflakes']
 " map jk to <ESC>
 inoremap jk <ESC>
 
+" map <Leader>s to substitute for current word under cursor
+" ref: http://vim.wikia.com/wiki/Search_and_replace_the_word_under_the_cursor
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
+
 "two Escapes save the buffer
 "map <Esc><Esc> :w<CR>
 
