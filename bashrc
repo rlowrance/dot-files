@@ -102,6 +102,7 @@ alias t="$HOME/Dropbox/todo/todo.sh -d /Users/$USER/Dropbox/todo/todo.cfg"
 
 PATH=~/Dropbox/dot-files/scripts/:$PATH
 PATH=~/java8/jdk1.8.0_92/bin/:$PATH
+PATH=/usr/local/stata:$PATH
 
 # enable tab completion in conda
 eval "$(register-python-argcomplete conda)"
