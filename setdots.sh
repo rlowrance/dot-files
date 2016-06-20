@@ -21,5 +21,3 @@ ln -s ~/Dropbox/dot-files/inputrc ~/.inputrc
 echo "source ~/Dropbox/dot-files/tmux.conf" > ~/.tmux.conf
 cp -a ~/Dropbox/dot-files/dot-vim/. ~/.vim/
 echo "source ~/Dropbox/dot-files/vimrc" > ~/.vimrc
-# now done in Unity via Gnome Tweak Tool
-#echo "xmodmap ~/Dropbox/dot-files/make-capslock-another-escape.xmodmap" > ~/.xinitrc
