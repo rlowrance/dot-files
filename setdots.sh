@@ -1,22 +1,17 @@
-# create files in Ubuntu home directory # overwrite any existing files or directories
+# create files, directories, and soft links in home directory 
+
+# step 1: make copies of existing target files and directories
 mv    ~/.bashrc     ~/.bashrc.bak
 mv    ~/.gitconfig ~/.gitconfig.bak
 mv    ~/.inputrc   ~/.inputrc.bak
 mv    ~/.tmux.conf ~/.tmux.conf.bak
+rm -r ~/.vim.bak
 mv -f ~/.vim       ~/.vim.bak
 mv    ~/.vimrc     ~/.vimrc.bak
 mv    ~/.xinitrc   ~/.xinitrc.bak
 mv    ~/.xsession  ~/.xsession.bak
 
-rm ~/.bashrc
-rm ~/.gitconfig
-rm ~/.inputrc
-rm ~/.tmux.conf
-rm -r -f ~/.vim
-rm ~/.vimrc
-rm ~/.xinitrc
-rm ~/.xsession
-
+# step 2: create files and directories in $HOME
 echo "source ~/Dropbox/dot-files/bashrc" > ~/.bashrc
 # enable the line below if the systems is at NYU
 #echo "source ~/Dropbox/dot-files/bashrc-nyu" >> ~/.bashrc
