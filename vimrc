@@ -26,6 +26,7 @@ filetype plugin indent on " indent according to syntax rules for file type
 " set status line
 set statusline=%f     " file name
 set statusline+=%y    " file type
+set statusline+=%m    " display + if file has been modified
 set statusline+=%=    " switch to right side
 set statusline+=%03l  " current line number
 set statusline+=/     " separator
