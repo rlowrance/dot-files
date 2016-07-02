@@ -1,15 +1,15 @@
 # create files, directories, and soft links in home directory 
 
 # step 1: make copies of existing target files and directories
-mv    ~/.bashrc     ~/.bashrc.bak
-mv    ~/.gitconfig ~/.gitconfig.bak
-mv    ~/.inputrc   ~/.inputrc.bak
-mv    ~/.tmux.conf ~/.tmux.conf.bak
-rm -r ~/.vim.bak
-mv -f ~/.vim       ~/.vim.bak
-mv    ~/.vimrc     ~/.vimrc.bak
-mv    ~/.xinitrc   ~/.xinitrc.bak
-mv    ~/.xsession  ~/.xsession.bak
+#mv    ~/.bashrc     ~/.bashrc.bak
+#mv    ~/.gitconfig ~/.gitconfig.bak
+#mv    ~/.inputrc   ~/.inputrc.bak
+#mv    ~/.tmux.conf ~/.tmux.conf.bak
+#rm -r ~/.vim.bak
+#mv -f ~/.vim       ~/.vim.bak
+#mv    ~/.vimrc     ~/.vimrc.bak
+#mv    ~/.xinitrc   ~/.xinitrc.bak
+#mv    ~/.xsession  ~/.xsession.bak
 
 # step 2: create files and directories in $HOME
 echo "source ~/Dropbox/dot-files/bashrc" > ~/.bashrc
