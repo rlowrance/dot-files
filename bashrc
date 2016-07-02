@@ -98,7 +98,7 @@ alias t="$HOME/Dropbox/todo/todo.sh -d /Users/$USER/Dropbox/todo/todo.cfg"
 # short cuts to servers
 #export ACCESS="lowrance@access.cims.nyu.edu"
 [[ :$PATH: == $HOME/anaconda2/bin:* ]] || PATH=$HOME/anaconda2/bin:$PATH
-[[ :$PATH: == $HOME/anaconda/bin:* ]] || PATH=$HOME/anaconda/bin:$PATH
+#[[ :$PATH: == $HOME/anaconda/bin:* ]] || PATH=$HOME/anaconda/bin:$PATH
 # export PATH=~/anaconda2/bin::~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 PATH=~/Dropbox/dot-files/scripts/:$PATH
