@@ -33,7 +33,7 @@ alias tvim="vim ~/Dropbox/todo/todo.txt"
 # edit specific todo-related files
 alias todo="vim ~/Dropbox/todo/todo.txt"
 alias projects="vim ~/Dropbox/todo/projects.org"
-alias maybe="vim ~/Dropbox/todo/maybe.org"
+alias maybe="vim ~/Dropbox/todo/maybe.md"
 alias next="vim ~/Dropbox/next/plan.asciidoc"
 alias tracking="vim ~/Dropbox/todo/tracking.md"
 alias migraines="vim ~/Dropbox/todo/migraines.txt"
@@ -73,6 +73,7 @@ alias sshhome="ssh roy@66.65.168.212"
 alias sshcarmen="ssh rel@10.0.1.22"
 alias sshdell="ssh roy@10.0.1.36"
 alias sshelektra="ssh roy@10.0.1.28"
+alias sshhp="ssh roy@10.0.1.39"
 
 # vnc
 alias vnccarmen="vnc://10.0.1.22"
@@ -105,7 +106,7 @@ PATH=~/java8/jdk1.8.0_92/bin/:$PATH
 PATH=/usr/local/stata:$PATH
 
 # enable tab completion in conda
-eval "$(register-python-argcomplete conda)"
+#eval "$(register-python-argcomplete conda)"
 
 # file containing configuration info for pep8 (used by Python)
 export XDG_CONFIG_HOME=~/Dropbox/dot-files/xdg_config_home/
