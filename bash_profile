@@ -3,7 +3,7 @@
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 
-source ~/.bashrc
-
-# added by Anaconda 2.1.0 installer
-export PATH="~/anaconda/bin:$PATH"
+# run .bashrc commands, if that file exists
+if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+fi
