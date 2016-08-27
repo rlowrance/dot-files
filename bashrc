@@ -1,7 +1,12 @@
-# \h  host name up to first .
+# -*- mode: Sh -*-
+
+# ref: http://stackoverflow.com/questions/394230/detect-the-os-from-a-bash-script
+#echo $OSTYPE
+
 # \W  basename of current working directory
 # prompt PS1="\W $"
-PS1="\h \W $"
+PS1="\W $"
+#PS1="\h \W $"
 
 # ignore a command if the same command was just recorded
 export HISTCONTROL=ignoredups
@@ -10,9 +15,6 @@ PYTHONPATH=~/Dropbox/pythonlib/sparsevector
 export PYTHONPATH
 
 # protect against mistakes
-#alias cp="cp --interactive --verbose"
-#alias mv="mv --interactive --verbose"
-#alias rm="rm --interactive"
 # MacOS does not use long options
 alias cp="cp -i -v"
 alias mv="mv -i -v"
@@ -20,6 +22,7 @@ alias rm="rm -i"
 
 # shortcuts
 alias emacs-help="cat ~/Dropboox/tracking/emacs-help.txt"
+#alias emacsu="/usr/bin/emacs $@"
 
 # os x only
 alias showhidden='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
@@ -31,13 +34,13 @@ alias tnyu="t ls @nyu; t lsp; t ls remi; t ls david; t ls loraine; t ls foster"
 alias tvim="vim ~/Dropbox/todo/todo.txt"
 
 # edit specific todo-related files
-alias todo="vim ~/Dropbox/todo/todo.txt"
-alias projects="vim ~/Dropbox/todo/projects.org"
-alias maybe="vim ~/Dropbox/todo/maybe.md"
-alias next="vim ~/Dropbox/next/plan.asciidoc"
-alias tracking="vim ~/Dropbox/todo/tracking.md"
-alias migraines="vim ~/Dropbox/todo/migraines.txt"
-alias game="vim ~/Dropbox/admin/NotesAdmin/game-1605NN-proposed.md"
+alias todo="emacs ~/Dropbox/todo/todo.txt"
+alias projects="emacs ~/Dropbox/todo/projects.org"
+alias maybe="emacs ~/Dropbox/todo/maybe.md"
+alias next="emacs ~/Dropbox/next/plan.asciidoc"
+alias tracking="emacs ~/Dropbox/todo/tracking.md"
+alias migraines="emacs ~/Dropbox/todo/migraines.txt"
+alias game="emacs ~/Dropbox/admin/NotesAdmin/game-1605NN-proposed.md"
 
 # tmux commands with hard-to-remember invocation options
 alias tmuxnew="tmux new -s $1"
@@ -45,7 +48,11 @@ alias tmuxa="tmux a -t $1"
 alias tmuxkill="tmux kill-session -t $1"
 
 # switch to a directory
+alias gads="cd ~/Dropbox/ads-applied-data-science/"
+alias gdsc="cd ~/Dropbox/ads-applied-data-science/dsc-data-science-certification/"
 alias gdots="cd ~/Dropbox/dot-files"
+alias gintro="cd ~/Dropbox/teaching/2016-intro-to-data-science/DS_course-kevin-munger-github/roy-2016/"
+alias gledger="cd ~/Dropbox/home/ledger/"
 alias gnotes="cd ~/Dropbox/Notes"
 alias gnotesa="cd ~/Dropbox/admin/NotesAdmin"
 alias gre="cd ~/Dropbox/shasha/re-avm/src"
@@ -62,11 +69,14 @@ alias fixcapslock="xmodmap ~/Dropbox/dot-files/make-capslock-another-escape.xmod
 alias topslowcpu="top -s 30 -o cpu"
 
 # time sheet
-alias timesheet="vim ~/Dropbox/timesheet/timesheet.txt"
+alias timesheet="emacs ~/Dropbox/timesheet/timesheet.txt"
 alias timereport="python ~/Dropbox/timesheet/timereport.py"
 
 # start emacs in terminal
-alias emacs="emacs -nw"
+case "$OSTYPE" in
+  darwin*) alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs $@";;
+  *);;
+esac
 
 # ssh
 alias sshhome="ssh roy@66.65.168.212"
@@ -101,9 +111,11 @@ alias t="$HOME/Dropbox/todo/todo.sh -d /Users/$USER/Dropbox/todo/todo.cfg"
 #[[ :$PATH: == $HOME/anaconda/bin:* ]] || PATH=$HOME/anaconda/bin:$PATH
 # export PATH=~/anaconda2/bin::~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
-PATH=~/Dropbox/dot-files/scripts/:$PATH
-PATH=~/java8/jdk1.8.0_92/bin/:$PATH
+PATH=~/Dropbox/dot-files/scripts:$PATH
+PATH=~/java8/jdk1.8.0_92/bin:$PATH
 PATH=/usr/local/stata:$PATH
+PATH=/Library/TeX/texbin:$PATH
+PATH=/usr/local/Cellar/ledger/3.1.1_2/bin:$PATH
 
 # enable tab completion in conda
 #eval "$(register-python-argcomplete conda)"
