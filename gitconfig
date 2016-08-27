@@ -3,7 +3,7 @@
   name = Roy Lowrance
   email = roy.lowrance@gmail.com
 [core]
-  editor = vim
+  editor = emacs
 [credential]
   helper = cache  --timeout=3600
 [alias]
