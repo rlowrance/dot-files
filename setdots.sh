@@ -1,23 +1,37 @@
 # create files, directories, and soft links in home directory 
 
 # step 1: make copies of existing target files and directories
-#mv    ~/.bashrc     ~/.bashrc.bak
-#mv    ~/.gitconfig ~/.gitconfig.bak
-#mv    ~/.inputrc   ~/.inputrc.bak
-#mv    ~/.tmux.conf ~/.tmux.conf.bak
+mv    ~/.bashrc     ~/.bashrc.bak
+mv    ~/.gitconfig ~/.gitconfig.bak
+mv    ~/.inputrc   ~/.inputrc.bak
+mv    ~/.tmux.conf ~/.tmux.conf.bak
+
 #rm -r ~/.vim.bak
 #mv -f ~/.vim       ~/.vim.bak
 #mv    ~/.vimrc     ~/.vimrc.bak
-#mv    ~/.xinitrc   ~/.xinitrc.bak
-#mv    ~/.xsession  ~/.xsession.bak
+
+mv    ~/.xinitrc   ~/.xinitrc.bak
+mv    ~/.xsession  ~/.xsession.bak
+
+# ~/.emacs.d is maintained separately on each system, for now
+mv    ~/.emacs ~/emacs.bak
 
 # step 2: create files and directories in $HOME
 echo "source ~/Dropbox/dot-files/bashrc" > ~/.bashrc
 # enable the line below if the systems is at NYU
 #echo "source ~/Dropbox/dot-files/bashrc-nyu" >> ~/.bashrc
-echo "source ~/Dropbox/dot-files/gvimrc" > ~/.gvimrc
+
 ln -s ~/Dropbox/dot-files/gitconf ~/.gitconfig
+
 ln -s ~/Dropbox/dot-files/inputrc ~/.inputrc  
+
+#ln -s ~/Dropbox/dot-files/emacs ~/.emacs
+cp ~/Dropbox/dot-files/emacs ~/.emacs
+# ls -s ~/Dropbox/dot-files/emacs.d ~/.emacs.d
+# cp -r ~/Dropbox/dot-files/emacs.d ~/.emacs.d
+
 echo "source ~/Dropbox/dot-files/tmux.conf" > ~/.tmux.conf
-cp -a ~/Dropbox/dot-files/dot-vim/. ~/.vim/
+
+#cp -a ~/Dropbox/dot-files/dot-vim/. ~/.vim
 echo "source ~/Dropbox/dot-files/vimrc" > ~/.vimrc
+echo "source ~/Dropbox/dot-files/gvimrc" > ~/.gvimrc
