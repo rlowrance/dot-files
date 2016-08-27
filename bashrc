@@ -34,13 +34,13 @@ alias tnyu="t ls @nyu; t lsp; t ls remi; t ls david; t ls loraine; t ls foster"
 alias tvim="vim ~/Dropbox/todo/todo.txt"
 
 # edit specific todo-related files
-alias todo="emacs ~/Dropbox/todo/todo.txt"
-alias projects="emacs ~/Dropbox/todo/projects.org"
-alias maybe="emacs ~/Dropbox/todo/maybe.md"
-alias next="emacs ~/Dropbox/next/plan.asciidoc"
-alias tracking="emacs ~/Dropbox/todo/tracking.md"
-alias migraines="emacs ~/Dropbox/todo/migraines.txt"
-alias game="emacs ~/Dropbox/admin/NotesAdmin/game-1605NN-proposed.md"
+alias todo="emacs ~/Dropbox/todo/todo.txt --no-splash"
+alias projects="emacs ~/Dropbox/todo/projects.org --no-splash"
+alias maybe="emacs ~/Dropbox/todo/maybe.org --no-splash"
+alias next="emacs ~/Dropbox/next/plan.asciidoc --no-splash"
+alias tracking="emacs ~/Dropbox/todo/tracking.org  -no-splash"
+alias migraines="emacs ~/Dropbox/todo/migraines.txt  --no-splash"
+alias game="emacs ~/Dropbox/admin/NotesAdmin/game-1605NN-proposed.md --no-splash"
 
 # tmux commands with hard-to-remember invocation options
 alias tmuxnew="tmux new -s $1"
