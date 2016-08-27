@@ -52,7 +52,7 @@ alias gads="cd ~/Dropbox/ads-applied-data-science/"
 alias gdsc="cd ~/Dropbox/ads-applied-data-science/dsc-data-science-certification/"
 alias gdots="cd ~/Dropbox/dot-files"
 alias gintro="cd ~/Dropbox/teaching/2016-intro-to-data-science/DS_course-kevin-munger-github/roy-2016/"
-alias gledger="cd ~/Dropbox/home/ledger/"
+alias gledger="cd ~/Dropbox/family/ledger/"
 alias gnotes="cd ~/Dropbox/Notes"
 alias gnotesa="cd ~/Dropbox/admin/NotesAdmin"
 alias gre="cd ~/Dropbox/shasha/re-avm/src"
@@ -73,9 +73,11 @@ alias timesheet="emacs ~/Dropbox/timesheet/timesheet.txt"
 alias timereport="python ~/Dropbox/timesheet/timereport.py"
 
 # start emacs in terminal
+echo $OSTYPE
 case "$OSTYPE" in
-  darwin*) alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs $@";;
-  *);;
+    darwin*) alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs $@";;
+    linux*) ;;
+    *);;
 esac
 
 # ssh
