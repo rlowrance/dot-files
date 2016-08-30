@@ -8,6 +8,19 @@
 PS1="\W $"
 #PS1="\h \W $"
 
+# turn on bash completion
+# ref: https://www.cs.cmu.edu/~15131/f16/topics/terminal-configuration/configuring-bash/
+echo $OSTYPE
+case "$OSTYPE" in
+    darwin*) if [ -f $(brew --prefix)/etc/bash_completion ]; then
+		 source $(brew --prefix)/etc/bash_completion
+	     fi;;
+    linux*) if [ -f /etc/bash_completion ]; then
+		source /etc/bash_completion
+	    fi;;
+    *);;
+esac
+
 # ignore a command if the same command was just recorded
 export HISTCONTROL=ignoredups
 
@@ -21,7 +34,9 @@ alias mv="mv -i -v"
 alias rm="rm -i"
 
 # shortcuts
-alias emacs-help="cat ~/Dropboox/tracking/emacs-help.txt"
+alias e="emacs $@ &"
+alias emacs-help="cat ~/Dropbox/tracking/emacs-help.txt"
+alias ls="ls --color=auto"
 #alias emacsu="/usr/bin/emacs $@"
 
 # os x only
@@ -34,13 +49,13 @@ alias tnyu="t ls @nyu; t lsp; t ls remi; t ls david; t ls loraine; t ls foster"
 alias tvim="vim ~/Dropbox/todo/todo.txt"
 
 # edit specific todo-related files
-alias todo="emacs ~/Dropbox/todo/todo.txt --no-splash"
-alias projects="emacs ~/Dropbox/todo/projects.org --no-splash"
-alias maybe="emacs ~/Dropbox/todo/maybe.org --no-splash"
-alias next="emacs ~/Dropbox/next/plan.asciidoc --no-splash"
-alias tracking="emacs ~/Dropbox/todo/tracking.org  -no-splash"
-alias migraines="emacs ~/Dropbox/todo/migraines.txt  --no-splash"
-alias game="emacs ~/Dropbox/admin/NotesAdmin/game-1605NN-proposed.md --no-splash"
+alias todo="emacs ~/Dropbox/todo/todo.txt &"
+alias projects="emacs ~/Dropbox/todo/projects.org &"
+alias maybe="emacs ~/Dropbox/todo/maybe.org &"
+alias next="emacs ~/Dropbox/next/plan.asciidoc &"
+alias tracking="emacs ~/Dropbox/todo/tracking.org &"
+alias migraines="emacs ~/Dropbox/todo/migraines.txt &"
+alias game="emacs ~/Dropbox/admin/NotesAdmin/game-1605NN-proposed.md &"
 
 # tmux commands with hard-to-remember invocation options
 alias tmuxnew="tmux new -s $1"
@@ -69,11 +84,10 @@ alias fixcapslock="xmodmap ~/Dropbox/dot-files/make-capslock-another-escape.xmod
 alias topslowcpu="top -s 30 -o cpu"
 
 # time sheet
-alias timesheet="emacs ~/Dropbox/timesheet/timesheet.txt"
+alias timesheet="emacs ~/Dropbox/timesheet/timesheet.txt &"
 alias timereport="python ~/Dropbox/timesheet/timereport.py"
 
 # start emacs in terminal
-echo $OSTYPE
 case "$OSTYPE" in
     darwin*) alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs $@";;
     linux*) ;;
