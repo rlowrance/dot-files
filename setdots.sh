@@ -14,7 +14,8 @@ mv    ~/.xinitrc   ~/.xinitrc.bak
 mv    ~/.xsession  ~/.xsession.bak
 
 # ~/.emacs.d is maintained separately on each system, for now
-mv    ~/.emacs ~/emacs.bak
+mv    ~/.emacs ~/.emacs.bak
+cp -r ~/.emacs.d ~/.emacs.d.bak
 
 # step 2: create files and directories in $HOME
 echo "source ~/Dropbox/dot-files/bashrc" > ~/.bashrc
@@ -27,6 +28,7 @@ ln -s ~/Dropbox/dot-files/inputrc ~/.inputrc
 
 #ln -s ~/Dropbox/dot-files/emacs ~/.emacs
 cp ~/Dropbox/dot-files/emacs ~/.emacs
+cp -r ~/Dropbox/dot-files/emacs.d-dell ~/.emacs.d
 # ls -s ~/Dropbox/dot-files/emacs.d ~/.emacs.d
 # cp -r ~/Dropbox/dot-files/emacs.d ~/.emacs.d
 
