@@ -37,3 +37,5 @@ echo "source ~/Dropbox/dot-files/tmux.conf" > ~/.tmux.conf
 #cp -a ~/Dropbox/dot-files/dot-vim/. ~/.vim
 echo "source ~/Dropbox/dot-files/vimrc" > ~/.vimrc
 echo "source ~/Dropbox/dot-files/gvimrc" > ~/.gvimrc
+
+source ~/.bashrc
