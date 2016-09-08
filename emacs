@@ -1,3 +1,4 @@
+; -*- mode: Lisp-*-
 (require 'package)
 (remove-hook 'elpy-modules 'elpy-module-flymake)
 
@@ -39,6 +40,47 @@
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
+;; M-o  open indented line below current line
+;; M-O  open indented line above current line
+;; ref: http://emacsredux.com/blog/2013/06/15/open-line-above/
+(defun smart-open-line-above ()
+  "Insert empty line above current line. Position cursor in it according to current mode."
+  (interactive)
+  (move-beginning-of-line nil)
+  (newline-and-indent)
+  (forward-line -1)
+  (indent-according-to-mode))
+(global-set-key (kbd "M-O") 'smart-open-line-above)
+
+(defun smart-open-line-below()
+  "Insert empty line below current line. Position cursor in it according to current mode."
+  (interactive)
+  (move-end-of-line nil)
+  (newline-and-indent))
+(global-set-key (kbd "M-o") 'smart-open-line-below)
+
+;; make folding easier
+;; C-c C-h  toggle hide/show for current block
+;; C-c C-j  hide all blocks
+;; C-u C-c C-j show all blocks
+; ref: http://txt.arboreus.com/2012/07/26/easy-folding-in-emacs-for-python.html
+(defun hs-enable-and-toggle ()
+  (interactive)
+  (hs-minor-mode 1)
+  (hs-toggle-hiding))
+(defun hs-enable-and-hideshow-all (&optional arg)
+  "Hide all blocks. If prefix arg is given, show all blocks."
+  (interactive "P")
+  (hs-minor-mode 1)
+  (if arg
+      (hs-show-all)
+      (hs-hide-all)))
+(global-set-key (kbd "C-c C-h") 'hs-enable-and-toggle)
+(global-set-key (kbd "C-C C-j") 'hs-enable-and-hideshow-all)
+
+;;;; BELOW ME SET MY EMACS ITSELF, SO DON"T EDIT
+
+      
 (setq inhibit-splash-screen t)  ;; don't display splash screen on startup
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
