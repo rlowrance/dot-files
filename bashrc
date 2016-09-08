@@ -29,15 +29,38 @@ export PYTHONPATH
 
 # protect against mistakes
 # MacOS does not use long options
+alias chown="chown --preserve-root"
+alias chmod="chmod --preserve-root"
+alias chgrp="chgrp --preserve-root"
 alias cp="cp -i -v"
+alias ln="ln -i"
 alias mv="mv -i -v"
 alias rm="rm -i"
 
-# shortcuts
-alias e="emacs $@ &"
+#  colorize output
+case "$OSTYPE" in
+    linux*)
+	alias diff="colordiff"
+	alias grep="grep --color=auto"
+	alias ls="ls --color=auto"
+	;;
+esac
+
+# emacs
+alias e="emacs"
+alias ec="emacsclient -c -a emacs"
+alias ect="emacsclient -t"
+alias emacskill="emacsclient -e '(client-save-kill-emacs')"
 alias emacs-help="cat ~/Dropbox/tracking/emacs-help.txt"
-alias ls="ls --color=auto"
-#alias emacsu="/usr/bin/emacs $@"
+export ALTERNATE_EDITOR=""
+export EDITOR="emacsclient -t"
+export VISUAL="emacclient -c -a emacs"
+
+case "$OSTYPE" in
+    darwin*) alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs";;
+    linux*) ;;
+    *);;
+esac
 
 # os x only
 alias showhidden='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
@@ -64,10 +87,13 @@ alias tmuxkill="tmux kill-session -t $1"
 
 # switch to a directory
 alias gads="cd ~/Dropbox/ads-applied-data-science/"
+alias gcti='cd ~/Dropbox/ads/cti/'
 alias gdsc="cd ~/Dropbox/ads-applied-data-science/dsc-data-science-certification/"
 alias gdots="cd ~/Dropbox/dot-files"
+alias ggo="cd ~/Dropbox/go-workspace/src/github.com/user/rlowrance"
 alias gintro="cd ~/Dropbox/teaching/2016-intro-to-data-science/DS_course-kevin-munger-github/roy-2016/"
 alias gledger="cd ~/Dropbox/family/ledger/"
+alias gmed="cd ~/family/medical/"
 alias gnotes="cd ~/Dropbox/Notes"
 alias gnotesa="cd ~/Dropbox/admin/NotesAdmin"
 alias gre="cd ~/Dropbox/shasha/re-avm/src"
@@ -86,13 +112,6 @@ alias topslowcpu="top -s 30 -o cpu"
 # time sheet
 alias timesheet="emacs ~/Dropbox/timesheet/timesheet.txt &"
 alias timereport="python ~/Dropbox/timesheet/timereport.py"
-
-# start emacs in terminal
-case "$OSTYPE" in
-    darwin*) alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs $@";;
-    linux*) ;;
-    *);;
-esac
 
 # ssh
 alias sshhome="ssh roy@66.65.168.212"
@@ -138,3 +157,11 @@ PATH=/usr/local/Cellar/ledger/3.1.1_2/bin:$PATH
 
 # file containing configuration info for pep8 (used by Python)
 export XDG_CONFIG_HOME=~/Dropbox/dot-files/xdg_config_home/
+
+# go-lang
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/Dropbox/go-workspace
+export PATH=$PATH:$GOPATH/bin
+
+# start emacs server
+emacs --daemon
