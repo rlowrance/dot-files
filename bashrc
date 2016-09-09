@@ -52,7 +52,7 @@ alias emacskill="emacsclient -e '(client-save-kill-emacs)'"
 alias emacs-help='cat ~/Dropbox/tracking/emacs-help.txt'
 export ALTERNATE_EDITOR=''
 export EDITOR='emacsclient -t'
-export VISUAL='emacclient -c -a emacs'
+export VISUAL='emacsclient -c -a emacs'
 
 case "$OSTYPE" in
     darwin*) alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs';;
