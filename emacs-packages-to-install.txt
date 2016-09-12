@@ -2,3 +2,4 @@ Use the package manager to install these packages locally
 
 - use-package
 - flycheck
+- go-mode
