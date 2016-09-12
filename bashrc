@@ -84,23 +84,19 @@ alias tmuxa='tmux a -t $1'
 alias tmuxkill='tmux kill-session -t $1'
 
 # switch to a directory
-alias gads='cd ~/Dropbox/ads-applied-data-science/'
+alias gadmin='cd ~/Dropbox/admin/'
+alias gads='cd ~/Dropbox/ads/'
 alias gcti='cd ~/Dropbox/ads/cti/'
 alias gdsc='cd ~/Dropbox/ads-applied-data-science/dsc-data-science-certification/'
 alias gdots='cd ~/Dropbox/dot-files'
 alias ggo='cd ~/Dropbox/go-workspace/src/github.com/user/rlowrance'
-alias gintro='cd ~/Dropbox/teaching/2016-intro-to-data-science/DS_course-kevin-munger-github/roy-2016/'
 alias gledger='cd ~/Dropbox/family/ledger/'
 alias gmed='cd ~/family/medical/'
-alias gnotes='cd ~/Dropbox/Notes'
-alias gnotesa='cd ~/Dropbox/admin/NotesAdmin'
 alias gre='cd ~/Dropbox/shasha/re-avm/src'
 alias gpaper1='cd ~/Dropbox/shasha/re-avm/docs/paper1'
+alias gref='cd ~/Dropbox/reference'
 alias gtimesheet='cd ~/Dropbox/timesheet'
 alias gtodo='cd ~/Dropbox/todo'
-
-# find notes with specified tag
-alias notesls='ls -c ~/Dropbox/Notes/ | grep $*'
 
 # misc
 alias startdropbox='~/.dropbox-dist/dropboxd'
