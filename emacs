@@ -11,6 +11,8 @@
 (package-initialize)
 ;; (require) your ELPA packages, configure them as normal
 
+(global-auto-revert-mode 1)  ; always check for changes on disk
+
 ;; org mode keys
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cl" 'org-agenda)
