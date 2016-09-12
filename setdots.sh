@@ -22,7 +22,7 @@ echo "source ~/Dropbox/dot-files/bashrc" > ~/.bashrc
 # enable the line below if the systems is at NYU
 #echo "source ~/Dropbox/dot-files/bashrc-nyu" >> ~/.bashrc
 
-ln -s ~/Dropbox/dot-files/gitconf ~/.gitconfig
+ln -s ~/Dropbox/dot-files/gitconfig ~/.gitconfig
 
 ln -s ~/Dropbox/dot-files/inputrc ~/.inputrc  
 
