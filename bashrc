@@ -22,7 +22,7 @@ esac
 # ignore a command if the same command was just recorded
 export HISTCONTROL=ignoredups
 
-PYTHONPATH=~/Dropbox/pythonlib/sparsevector
+PYTHONPATH=~/OneDrive/ads/python_lib
 export PYTHONPATH
 
 # protect against mistakes
@@ -47,12 +47,13 @@ esac
 # emacs
 alias e='emacs'
 alias ec='emacsclient -c -a emacs'
+alias es="emacs --daemon"
 alias ect='emacsclient -t'
-alias emacskill="emacsclient -e '(client-save-kill-emacs)'"
-alias emacs-help='cat ~/Dropbox/tracking/emacs-help.txt'
+alias eskill="emacsclient -e '(client-save-kill-emacs)'"
+alias eskill='emacsclient -e "(kill-emacs)"'
 export ALTERNATE_EDITOR=''
-export EDITOR='emacsclient -t'
-export VISUAL='emacsclient -c -a emacs'
+export EDITOR='emacs -nw'
+export VISUAL='emacs'
 
 case "$OSTYPE" in
     darwin*) alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs';;
@@ -64,19 +65,19 @@ esac
 alias showhidden='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hidehidden='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
+control=~/OneDrive/control
+todo=$control/todo
+
 # todo.txt
 alias thome='t ls @home; t lsp; t ls judith'
-alias tnyu='t ls @nyu; t lsp; t ls remi; t ls david; t ls loraine; t ls foster'
-alias tvim='vim ~/Dropbox/todo/todo.txt'
+alias tedit='emacs $control/todo/todo.txt'
 
 # edit specific todo-related files
-alias todo='emacs ~/Dropbox/todo/todo.txt &'
-alias projects='emacs ~/Dropbox/todo/projects.org &'
-alias maybe='emacs ~/Dropbox/todo/maybe.org &'
-alias next='emacs ~/Dropbox/next/plan.asciidoc &'
-alias tracking='emacs ~/Dropbox/todo/tracking.org &'
-alias migraines='emacs ~/Dropbox/todo/migraines.txt &'
-alias game='emacs ~/Dropbox/admin/NotesAdmin/game-1605NN-proposed.md &'
+alias todo='emacs $todo/todo.txt &'
+alias projects='emacs $todo/projects.org &'
+alias maybe='emacs $todo/maybe.org &'
+alias tracking='emacs $todo/tracking.org &'
+alias migraines='emacs $todo/migraines.org &'
 
 # tmux commands with hard-to-remember invocation options
 alias tmuxnew='tmux new -s $1'
@@ -84,31 +85,43 @@ alias tmuxa='tmux a -t $1'
 alias tmuxkill='tmux kill-session -t $1'
 
 # switch to a directory
-alias gadmin='cd ~/Dropbox/admin/'
-alias gads='cd ~/Dropbox/ads/'
-alias gcti='cd ~/Dropbox/ads/cti/'
-alias gdsc='cd ~/Dropbox/ads-applied-data-science/dsc-data-science-certification/'
-alias gdots='cd ~/Dropbox/dot-files'
+alias gadmin='cd $control/admin'
+alias gdots='cd $control/dot-files'
 alias ggo='cd ~/Dropbox/go-workspace/src/github.com/user/rlowrance'
-alias gledger='cd ~/Dropbox/family/ledger/'
-alias gmed='cd ~/family/medical/'
+alias gledger='cd $control/ledger'
+alias gmed='cd ~/family/medical'
+alias gref='cd ~/Dropbox/reference'
 alias gre='cd ~/Dropbox/shasha/re-avm/src'
 alias gpaper1='cd ~/Dropbox/shasha/re-avm/docs/paper1'
-alias gref='cd ~/Dropbox/reference'
-alias gtimesheet='cd ~/Dropbox/timesheet'
-alias gtodo='cd ~/Dropbox/todo'
+alias gtimesheet='cd $control/timesheet'
+alias gtodo='cd $control/todo'
+
+# switch directories for ADS clients and prospects
+alias g7chord='cd ~/Dropbox/ads/7chord/'
+alias gads='cd ~/Dropbox/ads/'
+alias gaingel='cd ~/Dropbox/ads/AiNGEL/'
+alias gamcap='cd ~/Dropbox/ads/a-and-m-capital'
+alias gbah='cd ~/Dropbox/ads/bah-peter-guerra'
+alias gblumberg='cd ~/Dropbox/ads/blumberg-capital'
+alias gcert='cd ~/Dropbox/ads/dsc-data-science-certification'
+alias gcti='cd ~/Dropbox/ads/cti/'
+alias gdaniel='cd ~/Dropbox/ads/daniel-gastel'
+alias gdetectica='cd ~/Dropbox/ads/detectica'
+alias gdsc='cd ~/Dropbox/ads/dsc-data-science-certification/'
+alias gmck='cd ~/Dropbox/ads/mckinsey'
 
 # misc
 alias startdropbox='~/.dropbox-dist/dropboxd'
-alias fixcapslock='xmodmap ~/Dropbox/dot-files/make-capslock-another-escape.xmodmap'
+alias fixcapslock='xmodmap $control/dot-files/make-capslock-another-escape.xmodmap'
 alias topslowcpu='top -s 30 -o cpu'
 
 # time sheet
-alias timesheet='emacs ~/Dropbox/timesheet/timesheet.txt &'
-alias timereport='python ~/Dropbox/timesheet/timereport.py'
+alias timesheet='emacs $control/timesheet/timesheet.txt &'
+alias timereport='python $control/timesheet/timereport.py'
 
-# ssh
-alias sshhome='ssh roy@66.65.168.212'
+# ssh to home :: dell
+alias sshhome='ssh roy@72.227.133.72'
+# once at home:
 alias sshcarmen='ssh rel@10.0.1.22'
 alias sshdell='ssh roy@10.0.1.36'
 alias sshelektra='ssh roy@10.0.1.28'
@@ -131,8 +144,8 @@ alias vnccarmen='vnc://10.0.1.22'
 
 # todo.txt
 # make sure PATH contains directory
-[[ :$PATH: == *$HOME/Dropbox/todo:* ]] || PATH=$HOME/Dropbox/todo:$PATH
-alias t='$HOME/Dropbox/todo/todo.sh -d /Users/$USER/Dropbox/todo/todo.cfg'
+[[ :$PATH: == *$todo/todo:* ]] || PATH=$todo:$PATH
+alias t='$todo/todo.sh -d /Users/$USER/Dropbox/todo/todo.cfg'
 
 # short cuts to servers
 #export ACCESS='lowrance@access.cims.nyu.edu'
@@ -140,7 +153,7 @@ alias t='$HOME/Dropbox/todo/todo.sh -d /Users/$USER/Dropbox/todo/todo.cfg'
 #[[ :$PATH: == $HOME/anaconda/bin:* ]] || PATH=$HOME/anaconda/bin:$PATH
 # export PATH=~/anaconda2/bin::~/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
-PATH=~/Dropbox/dot-files/scripts:$PATH
+PATH=~$control/dot-files/scripts:$PATH
 PATH=~/java8/jdk1.8.0_92/bin:$PATH
 PATH=/usr/local/stata:$PATH
 PATH=/Library/TeX/texbin:$PATH
@@ -157,5 +170,3 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/Dropbox/go-workspace
 export PATH=$PATH:$GOPATH/bin
 
-# start emacs server
-emacs --daemon

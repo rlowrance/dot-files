@@ -61,6 +61,9 @@
   (newline-and-indent))
 (global-set-key (kbd "M-o") 'smart-open-line-below)
 
+;; disable C-z, which send session to background
+(global-unset-key (kbd "C-z"))
+
 ;; make folding easier
 ;; C-c C-h  toggle hide/show for current block
 ;; C-c C-j  hide all blocks
@@ -72,7 +75,7 @@
   (hs-toggle-hiding))
 (defun hs-enable-and-hideshow-all (&optional arg)
   "Hide all blocks. If prefix arg is given, show all blocks."
-  (interactive "P")
+  (interactive "P")  ;; raw prefix argument
   (hs-minor-mode 1)
   (if arg
       (hs-show-all)
@@ -80,6 +83,24 @@
 (global-set-key (kbd "C-c C-h") 'hs-enable-and-toggle)
 (global-set-key (kbd "C-C C-j") 'hs-enable-and-hideshow-all)
 
+;; go-mode
+(add-hook 'go-mode-hook
+	  (lambda ()
+	    (add-hook 'before-save-hook 'gofmt-before-save)
+	    (setq default-tab-width 2)
+	    (setq indent-tabs-mode 1)))
+
+;; simply copy line
+;; ref: https://www.emacswiki.org/emacs/CopyingWholeLines
+(defun copy-line (arg)
+  "Copy lines (as many as prefix argument) into the kill ring"
+  (interactive "p")  ;; numeric prefix argument
+  (kill-ring-save (line-beginning-position)
+		  (line-beginning-position (+ 1 arg)))
+  (message "%d lines%s copied" arg (if (= 1 arg) "" "s")))
+(global-set-key "\C-c\C-k"  'copy-line)
+  
+  
 ;;;; BELOW ME SET MY EMACS ITSELF, SO DON"T EDIT
 
       
