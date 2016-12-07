@@ -65,6 +65,7 @@ esac
 alias showhidden='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hidehidden='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
+ads=~/OneDrive/ads
 control=~/OneDrive/control
 todo=$control/todo
 
@@ -97,18 +98,18 @@ alias gtimesheet='cd $control/timesheet'
 alias gtodo='cd $control/todo'
 
 # switch directories for ADS clients and prospects
-alias g7chord='cd ~/Dropbox/ads/7chord/'
-alias gads='cd ~/Dropbox/ads/'
-alias gaingel='cd ~/Dropbox/ads/AiNGEL/'
-alias gamcap='cd ~/Dropbox/ads/a-and-m-capital'
-alias gbah='cd ~/Dropbox/ads/bah-peter-guerra'
-alias gblumberg='cd ~/Dropbox/ads/blumberg-capital'
+alias g7chord='cd $ads/7chord/'
+alias gads='cd $ads/ads/'
+alias gaingel='cd $control/AiNGEL/'
+alias gamcap='cd /$ads/a-and-m-capital'
+alias gbah='cd $ads/bah-peter-guerra'
+alias gblumberg='cd ads/blumberg-capital'
 alias gcert='cd ~/Dropbox/ads/dsc-data-science-certification'
 alias gcti='cd ~/Dropbox/ads/cti/'
 alias gdaniel='cd ~/Dropbox/ads/daniel-gastel'
-alias gdetectica='cd ~/Dropbox/ads/detectica'
-alias gdsc='cd ~/Dropbox/ads/dsc-data-science-certification/'
-alias gmck='cd ~/Dropbox/ads/mckinsey'
+alias gdetectica='cd $ads/detectica'
+alias gdsc='cd $ads/dsc-data-science-certification/'
+alias gmck='cd $ads/mckinsey'
 
 # misc
 alias startdropbox='~/.dropbox-dist/dropboxd'
@@ -145,7 +146,7 @@ alias vnccarmen='vnc://10.0.1.22'
 # todo.txt
 # make sure PATH contains directory
 [[ :$PATH: == *$todo/todo:* ]] || PATH=$todo:$PATH
-alias t='$todo/todo.sh -d /Users/$USER/Dropbox/todo/todo.cfg'
+alias t='$todo/todo.sh -d $todo/todo.cfg'
 
 # short cuts to servers
 #export ACCESS='lowrance@access.cims.nyu.edu'
