@@ -1,4 +1,5 @@
 # -*- mode: Sh -*-
+# this file is run whenever a new terminal is started
 
 # \W  basename of current working directory
 # prompt PS1="\W $"
@@ -99,7 +100,7 @@ alias gtodo='cd $control/todo'
 
 # switch directories for ADS clients and prospects
 alias g7chord='cd $ads/7chord/'
-alias gads='cd $ads/ads/'
+alias gads='cd $ads'
 alias gaingel='cd $control/AiNGEL/'
 alias gamcap='cd /$ads/a-and-m-capital'
 alias gbah='cd $ads/bah-peter-guerra'
@@ -123,9 +124,9 @@ alias timereport='python $control/timesheet/timereport.py'
 # ssh to home :: dell
 alias sshhome='ssh roy@72.227.133.72'
 # once at home:
-alias sshcarmen='ssh rel@10.0.1.22'
+alias sshjudith='ssh rel@10.0.1.55'
 alias sshdell='ssh roy@10.0.1.36'
-alias sshelektra='ssh roy@10.0.1.28'
+alias sshrpu='ssh roy@10.0.1.60'
 alias sshhp='ssh roy@10.0.1.39'
 
 # vnc
@@ -170,4 +171,8 @@ export XDG_CONFIG_HOME=~/Dropbox/dot-files/xdg_config_home/
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/Dropbox/go-workspace
 export PATH=$PATH:$GOPATH/bin
+
+cp bash_profile ~/.bash_profile
+
+echo "ran control/dot-files/bashrc"
 
