@@ -20,6 +20,7 @@ cp -r ~/.emacs.d ~/.emacs.d.bak
 dotfiles=~/OneDrive/control/dot-files
 # step 2: create files and directories in $HOME
 echo "source $dotfiles/bashrc" > ~/.bashrc
+cp $dotfiles/bash_profile ~/.bash_profile
 # enable the line below if the systems is at NYU
 #echo "source ~/Dropbox/dot-files/bashrc-nyu" >> ~/.bashrc
 

@@ -172,7 +172,5 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/Dropbox/go-workspace
 export PATH=$PATH:$GOPATH/bin
 
-cp bash_profile ~/.bash_profile
-
 echo "ran control/dot-files/bashrc"
 
