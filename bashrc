@@ -23,9 +23,6 @@ esac
 # ignore a command if the same command was just recorded
 export HISTCONTROL=ignoredups
 
-PYTHONPATH=~/OneDrive/ads/python_lib
-export PYTHONPATH
-
 # protect against mistakes
 # MacOS does not use long options
 alias chown='chown --preserve-root'
@@ -66,9 +63,13 @@ esac
 alias showhidden='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hidehidden='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
-ads=~/OneDrive/ads
-control=~/OneDrive/control
+sync=~/Dropbox
+ads=$sync/ads
+control=$sync/control
 todo=$control/todo
+
+PYTHONPATH=$ads/python_lib
+export PYTHONPATH
 
 # todo.txt
 alias thome='t ls @home; t lsp; t ls judith'
