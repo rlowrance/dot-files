@@ -31,7 +31,7 @@
   :ensure t
   :init (global-flycheck-mode)
   :config
-   (setq-default flycheck-flake8-maximum-line-length 120))
+   (setq-default flycheck-flake8-maximum-line-length 160))
 (use-package markdown-mode
   :ensure t
   :commands (markdown-mode gfm-mode)
