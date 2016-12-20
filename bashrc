@@ -88,30 +88,30 @@ alias tmuxa='tmux a -t $1'
 alias tmuxkill='tmux kill-session -t $1'
 
 # switch to a directory
-alias gadmin='cd $control/admin'
-alias gdots='cd $control/dot-files'
-alias ggo='cd ~/Dropbox/go-workspace/src/github.com/user/rlowrance'
-alias gledger='cd $control/ledger'
-alias gmed='cd ~/family/medical'
-alias gref='cd ~/Dropbox/reference'
-alias gre='cd ~/Dropbox/shasha/re-avm/src'
-alias gpaper1='cd ~/Dropbox/shasha/re-avm/docs/paper1'
-alias gtimesheet='cd $control/timesheet'
-alias gtodo='cd $control/todo'
+alias gadmin="cd $control/admin"
+alias gdots="cd $control/dot-files"
+alias ggo="cd ~/Dropbox/go-workspace/src/github.com/user/rlowrance"
+alias gledger="cd $control/ledger"
+alias gref="cd ~/Dropbox/reference"
+alias gre="cd $ads/research/shasha/re-avm/src"
+alias gtimesheet="cd $control/timesheet"
+alias gtodo="cd $control/todo"
 
 # switch directories for ADS clients and prospects
-alias g7chord='cd $ads/7chord/'
-alias gads='cd $ads'
-alias gaingel='cd $control/AiNGEL/'
-alias gamcap='cd /$ads/a-and-m-capital'
-alias gbah='cd $ads/bah-peter-guerra'
-alias gblumberg='cd ads/blumberg-capital'
-alias gcert='cd ~/Dropbox/ads/dsc-data-science-certification'
-alias gcti='cd ~/Dropbox/ads/cti/'
-alias gdaniel='cd ~/Dropbox/ads/daniel-gastel'
-alias gdetectica='cd $ads/detectica'
-alias gdsc='cd $ads/dsc-data-science-certification/'
-alias gmck='cd $ads/mckinsey'
+clients=$ads/clients
+alias g7chord="cd $clients/7chord/"
+alias gads="cd $ads"
+alias gaingel="cd $cients/AiNGEL/"
+alias gamcap="cd $clients/a-and-m-capital"
+alias gblumberg="cd $clients/blumberg-capital"
+alias gdetectica="cd $clients/detectica"
+alias gmck="cd $clients/mckinsey"
+alias gamy="cd $clients/mckinsey/amy-row-zzc461"
+
+
+# switch to directories for incubations
+incubation=$ads/incubation
+alias gdsc="cd $incubation/dsc-data-science-certification"
 
 # misc
 alias startdropbox='~/.dropbox-dist/dropboxd'
