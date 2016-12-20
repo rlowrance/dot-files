@@ -17,7 +17,7 @@ mv    ~/.xsession  ~/.xsession.bak
 mv    ~/.emacs ~/.emacs.bak
 cp -r ~/.emacs.d ~/.emacs.d.bak
 
-dotfiles=~/OneDrive/control/dot-files
+dotfiles=~/Dropbox/control/dot-files
 # step 2: create files and directories in $HOME
 echo "source $dotfiles/bashrc" > ~/.bashrc
 cp $dotfiles/bash_profile ~/.bash_profile
@@ -41,4 +41,4 @@ echo "source $dotfiles/tmux.conf" > ~/.tmux.conf
 #echo "source ~/Dropbox/dot-files/vimrc" > ~/.vimrc
 #echo "source ~/Dropbox/dot-files/gvimrc" > ~/.gvimrc
 
-source bashrc
+source ~/.bashrc
