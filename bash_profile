@@ -13,3 +13,5 @@ export PATH="~/anaconda2/bin:$PATH"
 if [ -f ~/.bashrc ]; then
     source ~/.bashrc
 fi
+
+echo ran bash_profile
