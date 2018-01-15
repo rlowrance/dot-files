@@ -1,5 +1,7 @@
 # edit a file
+alias e7chord="emacs ~/Dropbox/ads/clients/7chord/7chord-01/7chord-meeting-notes.org &"
 alias ebashrc="emacs ~/Dropbox/control/dot-files/dell7810-dot-bashrc.sh &"
+alias ecti="emacs ~/Dropbox/ads/clients/cti/cti-meetings-notes.org &"
 alias eemacs="emacs ~/Dropbox/control/dot-files/dell7810-dot-emacs &"
 alias emaybe="emacs ~/Dropbox/control/todo/maybe.org &"
 alias etimesheet="emacs ~/Dropbox/control/timesheet/timesheet.txt &"
