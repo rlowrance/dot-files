@@ -13,3 +13,7 @@ alias gdots="cd ~/Dropbox/control/dot-files"
 
 # ssh to a server
 alias sshfp="bash ~/Dropbox/ads/clients/7chord/7chord-01/aws/sshfp.sh"
+
+# Julia lang
+PATH=$PATH:$HOME/bin/julia-d386e40c17/bin
+export PATH
