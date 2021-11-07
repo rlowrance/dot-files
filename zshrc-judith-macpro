@@ -1,0 +1,2 @@
+export PS1='%1~ %# '
+alias reload=". ~/.zshrc"
