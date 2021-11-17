@@ -35,4 +35,5 @@ set whichwrap+=<,>,h,l
 " auto read when a file is changed from the outside
 set autoread
 au FocusGained,BufEnter * checktime
+au BufRead,BufNewFile *.md setlocal textwidth=80
 
