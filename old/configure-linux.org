@@ -1,0 +1,10 @@
+* ubuntu 17.10
+** unbuntu
+*** emacs >= 25 (needed for elpy)
+** chrome
+*** lastpass
+** dropbox
+** anaconda python 3.x
+also install flake8
+** elpy (python emacs IDE)
+https://github.com/jorgenschaefer/elpy

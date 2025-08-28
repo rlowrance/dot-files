@@ -1,0 +1,39 @@
+inoremap jk <esc>
+set number "show line numbers
+filetype plugin on "Enable filtype plugins
+filetype indent on
+set ruler "always show current position
+set ignorecase "ignore case when searching
+set smartcase "when searching try to be smart about cases
+set hlsearch "highlight search results
+set incsearch "make search act like search in modern browsers
+set lazyredraw "don't redraw when executing macros (good for performance)
+set magic "for regular expression
+set showmatch "show matching brackets when text indicator is over them
+set mat=2 "blink matching brackets for N seconds
+set foldcolumn=1 "add a bit exgtra margin to the left
+syntax enable "enable syntax higlighting
+set encoding=utf8 "standard encoding and en_US is the standard langauge
+set ffs=unix,dos,mac "use Unix as the standard file type
+set expandtab "use spaces instead of tabs
+set ai "auto indent"
+set si "smart indent"
+set smarttab
+set laststatus=2 "alwasy show the status line
+" return to last edit positin when opening files
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+" 1 tab = 2 spaces
+set shiftwidth=2
+set tabstop=2
+" rely on git for backups
+set nobackup
+set nowb
+set noswapfile
+" configure backspace so that it acts as it should
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+" auto read when a file is changed from the outside
+set autoread
+au FocusGained,BufEnter * checktime
+au BufRead,BufNewFile *.md setlocal textwidth=80
+

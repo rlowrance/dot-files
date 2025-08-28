@@ -1,0 +1,3 @@
+set editing-mode emacs
+set keymap emacs
+set colored-stats on

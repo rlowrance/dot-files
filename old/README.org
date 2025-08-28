@@ -1,0 +1,15 @@
+Instructions
+* Create files in root directory as follows
+  .bash_profile
+  .bashrc
+  .inputrc
+  .tmux.conf
+  .vimrc
+* Contents of each of these files
+  All but .inputrc contain source statements, as in 
+    source ~/Dropbox/dot-files/bash_profile
+
+  The exception is .inputrc, which contains
+    $include ~/Dropbox/dot-files/inputrc
+* To print the dot files in the root directory
+  ./cat-dot-files.sh

@@ -1,0 +1,14 @@
+set number
+inoremap jk <ESC>
+set nocompatible
+syntax on
+set ruler
+set visualbell
+set backspace=indent,eol,start
+set ignorecase
+set smartcase
+set showmatch
+set autoindent
+set shiftwidth=2
+set laststatus=2
+au BufRead,BufNewFile *.md setlocal textwidth=80
