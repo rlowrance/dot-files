@@ -1,0 +1,9 @@
+;;; -*- coding: utf-8; mode: lisp-data -*-
+(("/Users/roylowrance/dot-files/emacs/.emacs.d/init.el" . 2173)
+ ("/Users/roylowrance/Dropbox/2-notes/"
+  (dired-filename
+   . "/Users/roylowrance/Dropbox/2-notes/medicine-and-medical-conditions.org"))
+ ("/Users/roylowrance/Dropbox/3-areas/flash-cards/"
+  (dired-filename
+   . "/Users/roylowrance/Dropbox/3-areas/flash-cards/my-cards.org"))
+ ("/Users/roylowrance/dot-files/README.org" . 219))
