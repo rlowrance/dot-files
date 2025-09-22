@@ -1,1 +1,0 @@
-grep $1 ~/Dropbox/mckinsey/hyundai-hct017/*.md ~/Dropbox/mckinsey/wells-fargo/*.md

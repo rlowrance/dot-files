@@ -1,3 +1,0 @@
-export PS1='%1~ %# '
-alias reload=". ~/.zshrc"
-alias eloquent="cd ~/Dropbox/projects/applied-data-science/continuing-education/learn-javascript/eloquent-javascript"

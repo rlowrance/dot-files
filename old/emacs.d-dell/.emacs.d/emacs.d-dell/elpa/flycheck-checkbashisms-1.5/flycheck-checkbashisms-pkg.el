@@ -1,1 +1,0 @@
-(define-package "flycheck-checkbashisms" "1.5" "checkbashisms checker for flycheck" '((emacs "24") (flycheck "0.25")) :url "https://github.com/Gnouc/flycheck-checkbashisms" :keywords '("convenience" "tools" "sh" "unix"))

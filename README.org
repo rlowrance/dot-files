@@ -1,1 +1,8 @@
-This is my readme file.
+This repo holds my dot files.
+
+It is designed for use with GNU stow, via the command `stow .`.
+
+The folder old contains old versions of dot files.
+
+To use this repo, clone it locally, then cd to it, then run `stow .`.
+
