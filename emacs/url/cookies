@@ -1,0 +1,21 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '(("realpython.com"
+  [url-cookie "cid" "e0c2bb312faa42d297134bd15aff0799"
+	      "Sat Aug 22 17:37:07 2026 GMT" "/" "realpython.com" nil]))
+)
+(setq url-cookie-secure-storage
+ '(("realpython.com"
+  [url-cookie "csrftoken" "TtWdnhpjLGvcVKyD0PpICeveXfNmqAUD"
+	      "Fri Aug 21 17:37:07 2026 GMT" "/" "realpython.com" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; coding: utf-8-emacs-unix
+;; End:
+
+;;; cookies ends here
