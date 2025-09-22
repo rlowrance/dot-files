@@ -65,7 +65,7 @@
     (eshell-send-input)))
 
 (global-set-key (kbd "C-!") 'eshell-here)
-
+!
 (defun eshell/x ()
   "Command x exits the closes the eshell window but retains the buffer"
   (insert "exit")
