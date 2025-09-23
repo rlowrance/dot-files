@@ -66,4 +66,9 @@
   (insert "exit")
   (eshell-send-input)
   (delete-window))
-	       
+
+;; set up all files
+(global-display-line-numbers-mode t)
+
+;; set up org-mode files
+(add-hook 'org-mode-hook #'visual-line-mode)

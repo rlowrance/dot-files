@@ -1,6 +1,7 @@
 ;;; -*- coding: utf-8; mode: lisp-data -*-
-(("/Users/roylowrance/dot-files/stow-run.sh" . 20)
- ("/Users/roylowrance/dot-files/emacs/.emacs.d/init.el" . 2173)
+(("/Users/roylowrance/dot-files/emacs/.emacs.d/init.el" . 2460)
+ ("/Users/roylowrance/dot-files/emacs/.emacs.d/early-init.el" . 164)
+ ("/Users/roylowrance/dot-files/stow-run.sh" . 20)
  ("/Users/roylowrance/Dropbox/2-notes/"
   (dired-filename
    . "/Users/roylowrance/Dropbox/2-notes/medicine-and-medical-conditions.org"))
