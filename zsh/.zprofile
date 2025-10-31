@@ -1,11 +1,16 @@
+# print path components on new lines
+alias showpath="echo $PATH | tr ':' '\n'"
 
-# Setting PATH for Python 3.12
-# The original version is saved in .zprofile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:${PATH}"
-export PATH
+# Set PATH to include user's bin directories, if they exist
+if [[ -d "$HOME/bin" ]]; then
+    export PATH="$HOME/bin:$PATH"
+    echo $PATH
+fi
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
+if [[ -d "HOME/.local/bin" ]]; then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
+	   
 # Setting PATH for Python 3.13
 # The original version is saved in .zprofile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.13/bin:${PATH}"
