@@ -1,0 +1,27 @@
+;; Set up custom.el file
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(when (and custom-file
+	   (file-exists-p custom-file))
+  (load custom-file nil :nomessage))
+;; Bootstrap crafter emacs in init.el
+(load "~/Dropbox/3-areas/config/crafted-emacs/modules/crafted-init-config")
+;; Add package definitions for completion packages
+(require 'crafted-completion-packages)
+
+;; Manually select "ef-themes" package
+(add-to-list 'package-selected-packages 'ef-themes)
+
+;; Install packages
+(package-install-selected-packages :noconfirm)
+
+;; Load configuation for the competion module
+;; REL 20250608 don't
+;(require 'crafted-completion-config)
+
+;; Enable global auto revert mode
+(global-auto-revert-mode 1)
+
+;; spelling via aspell
+(setq ispell-program-name "/opt/homebrew/bin/aspell")
+
+
