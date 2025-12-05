@@ -1,2 +1,1 @@
-stow emacs
-stow --adopt zsh
+stow --dotfiles .
