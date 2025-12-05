@@ -1,0 +1,24 @@
+;;; -*- coding: utf-8; mode: lisp-data -*-
+(("/Users/roylowrance/Dropbox/2-projects/REL/"
+  (dired-filename
+   . "/Users/roylowrance/Dropbox/2-projects/REL/25j-pychess"))
+ ("/Users/roylowrance/Dropbox/2-projects/REL/25j-pychess/"
+  (dired-filename
+   . "/Users/roylowrance/Dropbox/2-projects/REL/25j-pychess/pychess.py"))
+ ("/Users/roylowrance/Dropbox/3-responsibility/financial-management/accounting/journal-entries-2025.org"
+  . 7858)
+ ("/Users/roylowrance/Dropbox/1-notes/journal.org" . 101)
+ ("/Users/roylowrance/Dropbox/1-notes/timesheet.org" . 15674)
+ ("/Users/roylowrance/Dropbox/2-projects/REL/25j-pychess/pychess.py"
+  . 15773)
+ ("/Users/roylowrance/"
+  (dired-filename . "/Users/roylowrance/.emacs.d"))
+ ("/Users/roylowrance/Dropbox/"
+  (dired-filename . "/Users/roylowrance/Dropbox/2-notes"))
+ ("/Users/roylowrance/.emacs.d/"
+  (dired-filename . "/Users/roylowrance/.emacs.d/init.el~"))
+ ("/Users/roylowrance/.emacs.d/init.el" . 2510)
+ ("/Users/roylowrance/Dropbox/0-inbox/"
+  (dired-filename
+   . "/Users/roylowrance/Dropbox/0-inbox/History as a giant data set.pdf"))
+ ("/Users/roylowrance/dot-files/emacs/init.el" . 2010))

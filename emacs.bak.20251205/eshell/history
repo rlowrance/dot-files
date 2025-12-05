@@ -1,0 +1,20 @@
+ls
+ls
+tree
+x
+x
+exit
+ls
+(message "hello world")
+message "hi"
+echo "hi2"
+echo hellow world
+car echo hi wo
+car (echo hi wo)
+(echo hi wo)
+car (list "hi" "w")
+listify "hi" "w"
+listify hi wo
+car { listify hi wo}
+car {listify hi wo}
+printenv

@@ -3,10 +3,11 @@
 (when (and custom-file
 	   (file-exists-p custom-file))
   (load custom-file nil :nomessage))
+
 ;; Bootstrap crafter emacs in init.el
-(load "~/Dropbox/3-responsibility/config/crafted-emacs/modules/crafted-init-config")
+;(load "~/crafted-emacs/modules/crafted-init-config")
 ;; Add package definitions for completion packages
-(require 'crafted-completion-packages)
+;(require 'crafted-completion-packages)
 
 ;; Manually select "ef-themes" package
 (add-to-list 'package-selected-packages 'ef-themes)
@@ -71,3 +72,4 @@
   (insert "exit")
   (eshell-send-input)
   (delete-window))
+≈
