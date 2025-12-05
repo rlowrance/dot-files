@@ -4,7 +4,7 @@
 	   (file-exists-p custom-file))
   (load custom-file nil :nomessage))
 ;; Bootstrap crafter emacs in init.el
-(load "~/Dropbox/3-areas/config/crafted-emacs/modules/crafted-init-config")
+(load "~/Dropbox/3-responsibility/config/crafted-emacs/modules/crafted-init-config")
 ;; Add package definitions for completion packages
 (require 'crafted-completion-packages)
 
